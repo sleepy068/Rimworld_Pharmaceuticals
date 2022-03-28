@@ -70,7 +70,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Milkleaf</chemical>
         <addictiveness>0.02</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>

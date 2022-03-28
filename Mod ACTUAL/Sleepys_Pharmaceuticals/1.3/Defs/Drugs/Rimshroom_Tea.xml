@@ -12,7 +12,7 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_RimshroomTea</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-      <drawSize>0.88</drawSize>
+      <drawSize>0.66</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
@@ -92,7 +92,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-3.0</severityPerDay>
+        <severityPerDay>-2.5</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>

@@ -4,9 +4,9 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Stickyoak</defName>
     <label>stickyoak</label>
-    <description>An crudely processed and refined extracted alkaloid from the milkleaf plant. Stickyoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The low quality and less than ideal manufacturing environments mean stickyoak is generally hazardous to one's health with overdosing been more common than the other high grade resin drugs. Named for its crude blackened appearance when compared to the higher grade resin products. While of low quality, it is still extremely addictive and addicts will often go to any length to feed their addiction. Usually manufactured within criminal organisations in many mid-worlds as an illegal recreational drug that has the potential to destroy the lives of the users.</description>
+    <description>An crudely processed and refined extracted alkaloid from the milkleaf plant. Stickyoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The low quality and less than ideal manufacturing environments mean stickyoak is generally hazardous to one's health with overdosing been more common than the other high grade resin drugs. Named for its crude blackened appearance when compared to the higher grade resin products. While of low quality, it is still extremely addictive and addicts will often go to any length to feed their addiction. \n\nUsually manufactured within criminal organisations in many mid-worlds as an illegal recreational drug that has the potential to destroy the lives of the users.</description>
     <descriptionHyperlinks>
-      <HediffDef>DiaresinoakHigh</HediffDef>
+      <HediffDef>StickyoakHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>
       <HediffDef>MilkleafAddiction</HediffDef>
 	  <HediffDef>ChemicalDamageSevere</HediffDef>
@@ -40,7 +40,7 @@
       <chairSearchRadius>0</chairSearchRadius>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>DiaresinoakHigh</hediffDef>
+          <hediffDef>StickyoakHigh</hediffDef>
           <severity>0.75</severity>
           <toleranceChemical>Milkleaf</toleranceChemical>
         </li>
@@ -71,7 +71,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Milkleaf</chemical>
         <addictiveness>0.05</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>

@@ -26,5 +26,18 @@
     <researchViewX>0.10</researchViewX>
     <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>AmphetamineSynthesis</defName>
+    <label>amphetamine synthesis</label>
+    <description>Synthesis of amphetamine from neutroamine into various hard drugs.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>0.20</researchViewX>
+    <researchViewY>5.00</researchViewY>
+  </ResearchProjectDef>
 
 </Defs>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Oxyether</defName>
     <label>oxyether</label>
-    <description>Oxyether is a moderately powerful pain relief medication. Synthesised from resinether, a alkaloid from the milkleaf plant . While useful in many mid-worlds as a medicine used for long term pain management of patients, the milkleaf family of drugs are known to be highly addictive and a common drug of abuse.</description>
+    <description>Oxyether is a moderately powerful pain relief medication. Synthesised from resinether, a alkaloid from the milkleaf plant. While useful in many mid-worlds as a medicine used for long term pain management of patients, the milkleaf family of drugs are known to be highly addictive and a common drug of abuse.</description>
     <descriptionHyperlinks>
       <HediffDef>OxyetherHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>
@@ -15,11 +15,12 @@
       <texPath>Things/Item/Drug/SLP_Drug_Oxyether</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>350</WorkToMake>
       <MarketValue>9</MarketValue>
-      <Mass>0.01</Mass>
+      <Mass>0.005</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
     <ingestible>
@@ -53,8 +54,8 @@
       <li Class="CompProperties_Drug">
         <chemical>Milkleaf</chemical>
         <addictiveness>0.01</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
+        <existingAddictionSeverityOffset>0.10</existingAddictionSeverityOffset>
+        <needLevelOffset>0.4</needLevelOffset>
         <listOrder>200</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
         <largeOverdoseChance>0.001</largeOverdoseChance>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Resinether</defName>
     <label>diaresinoak</label>
-    <description>A biosynthetic intermediate of the resinoak pathway harvested from the milkleaf plant. Resinether is known for its ability to act as a significant stimulant and having pain reducing mechanisms. The drug is typically used as a precursor material and usually further refined into other drugs. While it is not very safe to be taken directly, it can have a signficant effect of a persons reaction time and moving.</description>
+    <description>A biosynthetic intermediate of the resinoak pathway harvested from the milkleaf plant. Resinether is known for its ability to act as a significant stimulant and having pain reducing mechanisms. The drug is typically used as a precursor material and usually further refined into other drugs. \n\nWhile it is not very safe to be taken directly, it can have a significant effect of a persons reaction time and moving speed.</description>
     <descriptionHyperlinks>
       <HediffDef>ResinetherHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>
@@ -71,7 +71,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Milkleaf</chemical>
         <addictiveness>0.005</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
