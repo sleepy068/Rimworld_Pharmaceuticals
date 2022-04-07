@@ -4,14 +4,14 @@
   <ResearchProjectDef>
     <defName>RimshroomBrewing</defName>
     <label>rimshroom brewing</label>
-    <description>Prepare rimshroom caps into a mildly psychedelic-inducing tea at the campfire or cooking stove.</description>
+    <description>Prepare rimshroom caps into a mildly psychedelic-inducing tea at a campfire or cooking stove.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
     <tags>
       <li>TribalStart</li>
     </tags>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>5.00</researchViewY>
+    <researchViewY>4.95</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
@@ -23,8 +23,8 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>0.10</researchViewX>
-    <researchViewY>5.00</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>0.05</researchViewY>
   </ResearchProjectDef>
   
     <ResearchProjectDef>
@@ -36,8 +36,8 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>0.20</researchViewX>
-    <researchViewY>5.00</researchViewY>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>0.60</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

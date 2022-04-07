@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="MakeableDrugBase">
+  <ThingDef ParentName="DrugBase">
     <defName>SLP_Oxyether</defName>
     <label>oxyether</label>
-    <description>Oxyether is a moderately powerful pain relief medication. Synthesised from resinether, a alkaloid from the milkleaf plant. While useful in many mid-worlds as a medicine used for long term pain management of patients, the milkleaf family of drugs are known to be highly addictive and a common drug of abuse.</description>
+    <description>Oxyether is a moderately powerful pain relief medication. Synthesised from resinether, an alkaloid from the milkleaf plant. While useful in many mid-worlds as a medicine used for long term pain management of patients, the milkleaf family of drugs are known to be highly addictive and a common drug of abuse.</description>
     <descriptionHyperlinks>
       <HediffDef>OxyetherHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>
@@ -14,6 +14,7 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Oxyether</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
     </graphicData>
 	<socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
@@ -27,6 +28,10 @@
       <joyKind>Chemical</joyKind>
       <joy>0.10</joy>
       <drugCategory>Medical</drugCategory>
+	  <foodType>Processed</foodType>
+      <baseIngestTicks>100</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <ingestSound>Ingest_Pill</ingestSound>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OxyetherHigh</hediffDef>
@@ -40,16 +45,6 @@
         </li>
       </outcomeDoers>
     </ingestible>
-    <recipeMaker>
-      <researchPrerequisite>MilkleafRefining</researchPrerequisite>
-      <recipeUsers>
-        <li>DrugLab</li>
-      </recipeUsers>
-      <soundWorking>Recipe_Drug</soundWorking>
-    </recipeMaker>
-    <costList>
-      <SLP_Resinether>0.125</SLP_Resinether>
-    </costList>
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Milkleaf</chemical>
@@ -101,5 +96,41 @@
       </li>
     </stages>
   </ThoughtDef>
+  
+  <RecipeDef>
+    <defName>Make_Oxyether</defName>
+    <label>make oxyether x8</label>
+    <description>Make oxyether from resinether.</description>
+    <jobString>Making oxyether.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>MilkleafRefining</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+    </recipeUsers>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SLP_Resinether</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SLP_Resinether</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SLP_Oxyether>8</SLP_Oxyether>
+    </products>
+  </RecipeDef>
   
 </Defs>

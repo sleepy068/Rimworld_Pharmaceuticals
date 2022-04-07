@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Woof</defName>
     <label>woof</label>
-    <description>A synthetic stimulant drug of the amphetamine class. Woof gives the user a sudden burst of energy and a very strong euphoric rush. While the drug causes an intense rush it has the downside of causing some difficulty with memory retention and a distorted sense of time resulting in the user working slower. \n\nOn many mid-worlds, woof sees illegal use at night clubs and at parties. </description>
+    <description>A synthetic stimulant drug of the amphetamine class. Woof gives the user a sudden burst of energy and a very strong euphoric rush. While the drug causes an intense rush it has the downside of causing some difficulty with memory retention and a distorted sense of time resulting in the user working slower. \n\nOn many mid-worlds, woof sees illegal use at night clubs and at parties.</description>
     <descriptionHyperlinks>
       <HediffDef>WoofHigh</HediffDef>
 	  <HediffDef>AmphetamineTolerance</HediffDef>
@@ -14,7 +14,7 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Woof</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <drawSize>0.50</drawSize>
+	  <drawSize>0.60</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
@@ -75,7 +75,7 @@
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
         <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.015</largeOverdoseChance>
+        <largeOverdoseChance>0.010</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>

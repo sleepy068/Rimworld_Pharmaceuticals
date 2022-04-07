@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Stickyoak</defName>
     <label>stickyoak</label>
-    <description>An crudely processed and refined extracted alkaloid from the milkleaf plant. Stickyoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The low quality and less than ideal manufacturing environments mean stickyoak is generally hazardous to one's health with overdosing been more common than the other high grade resin drugs. Named for its crude blackened appearance when compared to the higher grade resin products. While of low quality, it is still extremely addictive and addicts will often go to any length to feed their addiction. \n\nUsually manufactured within criminal organisations in many mid-worlds as an illegal recreational drug that has the potential to destroy the lives of the users.</description>
+    <description>An crudely processed and refined extracted alkaloid from the milkleaf plant. Stickyoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The low quality and less than ideal manufacturing environments mean stickyoak is generally hazardous to one's health with overdosing been more common than the other high grade resin drugs. Named for its crude blackened appearance when compared to the higher grade resin products. While of low quality, it is still extremely addictive and addicts will often go to any length to get more of the drug. \n\nUsually manufactured within criminal organisations in many mid-worlds as an illegal recreational drug that has the potential to destroy the lives of its users.</description>
     <descriptionHyperlinks>
       <HediffDef>StickyoakHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>
@@ -14,6 +14,7 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Stickyoak</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.80</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
