@@ -23,7 +23,7 @@
       <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Milkleaf</immatureGraphicPath>
 	  <fertilityMin>0.5</fertilityMin>
 	  <fertilitySensitivity>0.7</fertilitySensitivity>
-      <growDays>5</growDays>
+      <growDays>12</growDays>
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>SLP_MilkleafPod</harvestedThingDef>
@@ -97,8 +97,8 @@
     <plant>
       <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Penicillium</immatureGraphicPath>
 	  <fertilityMin>0.1</fertilityMin>
-	  <fertilitySensitivity>0.7</fertilitySensitivity>
-      <growDays>5</growDays>
+	  <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growDays>8</growDays>
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>SLP_Penicillium</harvestedThingDef>
