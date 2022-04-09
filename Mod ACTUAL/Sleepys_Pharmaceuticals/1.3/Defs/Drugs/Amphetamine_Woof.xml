@@ -166,6 +166,7 @@
       <li>
         <label>withdrawal</label>
         <painFactor>1</painFactor>
+		<socialFightChanceFactor>1.50</socialFightChanceFactor>
         <restFallFactorOffset>0.3</restFallFactorOffset>
         <capMods>
           <li>
