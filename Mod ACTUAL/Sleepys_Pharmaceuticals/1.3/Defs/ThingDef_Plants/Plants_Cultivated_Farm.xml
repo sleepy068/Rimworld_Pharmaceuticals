@@ -77,4 +77,41 @@
     </plant>
   </ThingDef>
   
+  <!--==== Penicillium ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_Penicillium</defName>
+    <label>penicillium</label>
+    <description>Effectively just common mould, penicillium is a genus of ascomycetous fungi that is part of the mycobiome of many species and is of major importance in the natural environment, in food spoilage, and in food and drug production. \n\nWhile penicillium grows everywhere, this genetically modified version must be grown in Hydroponics to be farmed properly.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+	  <Beauty>-1</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Mature_Penicillium</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Penicillium</immatureGraphicPath>
+	  <fertilityMin>0.1</fertilityMin>
+	  <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>5</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_Penicillium</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>1</sowMinSkill>
+      <sowTags>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>1.0</visualSizeRange>
+	  <maxMeshCount>3</maxMeshCount>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
 </Defs>
