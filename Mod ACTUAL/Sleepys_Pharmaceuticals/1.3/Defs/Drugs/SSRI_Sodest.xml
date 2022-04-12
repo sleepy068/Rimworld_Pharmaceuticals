@@ -31,7 +31,7 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SodestCalm</hediffDef>
           <severity>1.0</severity>
-          <toleranceChemical>Amphetamine</toleranceChemical>
+          <toleranceChemical>SSRI</toleranceChemical>
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SSRITolerance</hediffDef>
@@ -54,11 +54,10 @@
       <li Class="CompProperties_Drug">
         <chemical>SSRI</chemical>
         <addictiveness>0.03</addictiveness>
+		<minToleranceToAddict>0.10</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.0</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>
@@ -108,6 +107,7 @@
     <defName>SSRI</defName>
     <label>SSRI</label>
     <addictionHediff>SSRIAddiction</addictionHediff>
+	<toleranceHediff>SSRITolerance</toleranceHediff>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
@@ -159,7 +159,7 @@
       </li>
       <li>
         <label>SSRI withdrawal</label>
-        <description>My heart feels heavy. I can't really deal with my problems well.</description>
+        <description>My heart feels heavy. I can't really deal with my problems very well.</description>
         <baseMoodEffect>-12</baseMoodEffect>
       </li>
     </stages>

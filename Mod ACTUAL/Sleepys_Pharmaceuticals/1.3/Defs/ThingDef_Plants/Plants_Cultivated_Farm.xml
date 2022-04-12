@@ -108,8 +108,7 @@
         <li>Hydroponic</li>
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
-      <visualSizeRange>1.0</visualSizeRange>
-	  <maxMeshCount>3</maxMeshCount>
+      <visualSizeRange>0.5</visualSizeRange>
       <wildOrder>2</wildOrder>
     </plant>
   </ThingDef>

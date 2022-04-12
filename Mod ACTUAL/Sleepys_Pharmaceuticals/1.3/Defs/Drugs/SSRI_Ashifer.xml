@@ -31,7 +31,7 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AshiferCalm</hediffDef>
           <severity>1.0</severity>
-          <toleranceChemical>Amphetamine</toleranceChemical>
+          <toleranceChemical>SSRI</toleranceChemical>
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SSRITolerance</hediffDef>
@@ -54,11 +54,10 @@
       <li Class="CompProperties_Drug">
         <chemical>SSRI</chemical>
         <addictiveness>0.022</addictiveness>
+		<minToleranceToAddict>0.10</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.0</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>

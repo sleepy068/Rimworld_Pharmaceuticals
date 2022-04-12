@@ -14,12 +14,12 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Resinether</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <drawSize>0.80</drawSize>
+	  <drawSize>0.83</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>350</WorkToMake>
-      <MarketValue>63</MarketValue>
+      <MarketValue>49</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>

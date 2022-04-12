@@ -3,67 +3,86 @@
 
   <ResearchProjectDef>
     <defName>RimshroomBrewing</defName>
-    <label>rimshroom brewing</label>
+    <label>Rimshroom Brewing</label>
     <description>Prepare rimshroom caps into a mildly psychedelic-inducing tea at a campfire or cooking stove.</description>
     <baseCost>500</baseCost>
     <techLevel>Neolithic</techLevel>
+	<tab>SLP_PHARMA</tab>
     <tags>
       <li>TribalStart</li>
     </tags>
     <researchViewX>0.00</researchViewX>
-    <researchViewY>4.95</researchViewY>
+    <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
 
   <ResearchProjectDef>
     <defName>MilkleafRefining</defName>
-    <label>milkleaf refining</label>
+    <label>Milkleaf Refining</label>
     <description>Refine the latex from milkleaf pods into various drugs from hard drugs to those for medical support.</description>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>0.05</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
   
     <ResearchProjectDef>
     <defName>AmphetamineSynthesis</defName>
-    <label>amphetamine synthesis</label>
+    <label>Amphetamine Synthesis</label>
     <description>Synthesis of amphetamine class drugs.</description>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>5.00</researchViewX>
-    <researchViewY>0.60</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
     <defName>SupportDrugSynthesis</defName>
-    <label>support drug synthesis</label>
-    <description>Synthesis of various support role drugs.</description>
+    <label>Mental Health Drugs</label>
+    <description>Synthesis of various mental health support drugs.</description>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>4.95</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>2.00</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
     <defName>MedicalMouldFarming</defName>
-    <label>medical mould farming</label>
-    <description>The growing of various moulds for synthesising drugs.</description>
+    <label>Medical Mould Farming</label>
+    <description>The growing of various moulds for synthesising into drugs.</description>
     <baseCost>800</baseCost>
     <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>1.00</researchViewX>
-    <researchViewY>4.97</researchViewY>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>EMFirstAid</defName>
+    <label>Emergency Response Drugs</label>
+    <description>The refinement and synthesis of first aid and emergency response drugs.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>3.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

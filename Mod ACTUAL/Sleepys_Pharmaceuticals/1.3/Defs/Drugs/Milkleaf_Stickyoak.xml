@@ -14,7 +14,7 @@
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Stickyoak</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <drawSize>0.80</drawSize>
+	  <drawSize>0.83</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>

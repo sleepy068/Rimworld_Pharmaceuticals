@@ -4,14 +4,14 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Epinephrine</defName>
     <label>Epinephrine</label>
-    <description>Epinephrine, also known as Adrenaline, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration). When utilised as a medicine it can provide a very powerful surge recreation of the user. This surge greatly enhances movement speed and consciousness but its effects are quickly diminished. Epinephrine is by some paramilitary organisations on mid-worlds as a means to get severely injured or unconscious soldiers moving and out of harms way.</description>
+    <description>Epinephrine, also known as Adrenaline, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration). When utilised as a medicine it can provide a very powerful surge reaction of the user. This surge greatly enhances movement speed and consciousness but its effects are quickly diminished. Epinephrine is by some paramilitary organisations on mid-worlds as a means to get severely injured or unconscious soldiers moving and out of harms way.</description>
     <descriptionHyperlinks>
       <HediffDef>EpinephrineHigh</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_Epinephrine</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
-	  <drawSize>0.80</drawSize>
+	  <drawSize>0.83</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
@@ -42,7 +42,7 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-      <researchPrerequisite>SupportDrugSynthesis</researchPrerequisite>
+      <researchPrerequisite>EMFirstAid</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
@@ -68,7 +68,7 @@
     <defName>EpinephrineHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
     <label>Epinephrine</label>
-    <labelNoun>BDense</labelNoun>
+    <labelNoun>Epinephrine</labelNoun>
     <description>Epinephrine in the bloodstream. It surges the body into action.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -85,11 +85,11 @@
 			<painFactor>0.2</painFactor>
 			<capMods>
             <li>
-              <capacity>Consciousness</capacity>
+              <capacity>Consciousness</capacity> 
               <offset>0.50</offset>
             </li>
 			<li>
-              <capacity>Moving</capacity>
+              <capacity>Moving</capacity> 
               <offset>0.50</offset>
             </li>
           </capMods>
@@ -97,7 +97,7 @@
       </stages>
   </HediffDef>
   
-  <!-- No addictive, just added to prevent error -->
+  <!-- Not addictive, just added to prevent error -->
 
   <ChemicalDef>
     <defName>Epinephrine</defName>
