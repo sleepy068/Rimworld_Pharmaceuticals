@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="MakeableDrugBase">
+  <ThingDef ParentName="MakeableDrugPillBase">
     <defName>SLP_Hypercillin</defName>
     <label>hypercillin</label>
     <description>A powerful and augmented synthesised version of Penicillin. Created on Glitterworlds in an effort to provide a powerful antibiotic. Greatly helps boost the users immunity gain speed and recovery from illness from bacterial and viral infections.</description>
@@ -13,6 +13,7 @@
       <graphicClass>Graphic_StackCount</graphicClass>
 	  <drawSize>0.85</drawSize>
     </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>450</WorkToMake>
@@ -29,7 +30,6 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>HypercillinHigh</hediffDef>
           <severity>1.0</severity>
-          <toleranceChemical>Penicillin</toleranceChemical>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -46,13 +46,8 @@
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>Penicillin</chemical>
-        <addictiveness>0.0</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.0</largeOverdoseChance>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
       </li>
     </comps>
   </ThingDef>

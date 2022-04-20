@@ -7,7 +7,6 @@
     <description>A fragrant tea infused with caps of the rimshroom. Drinking it induces a subtle psychedelic high. This tea is easy to produce at cooking facilities. \n\nMany tribes use rimshroom tea as part of social and religious rituals or to help avoid the heavier mental effects from eating rimshroom raw.</description>
     <descriptionHyperlinks>
       <HediffDef>RimshroomTeaHigh</HediffDef>
-      <HediffDef>RimshroomTolerance</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_RimshroomTea</texPath>
@@ -42,12 +41,6 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>RimshroomTeaHigh</hediffDef>
           <severity>0.50</severity>
-          <toleranceChemical>Rimshroom</toleranceChemical>
-        </li>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>RimshroomTolerance</hediffDef>
-          <severity>0.15</severity>
-          <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -70,12 +63,7 @@
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>Rimshroom</chemical>
-        <addictiveness>0.0</addictiveness>
-        <minToleranceToAddict>1.00</minToleranceToAddict>
-        <existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
-        <listOrder>30</listOrder>
+        <listOrder>200</listOrder>
       </li>
     </comps>
   </ThingDef>

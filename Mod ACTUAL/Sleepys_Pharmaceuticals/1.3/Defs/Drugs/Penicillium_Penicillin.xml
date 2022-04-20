@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="MakeableDrugBase">
+  <ThingDef ParentName="MakeableDrugPillBase">
     <defName>SLP_Penicillin</defName>
     <label>penicillin</label>
     <description>A modified version of Penicillin obtained from genetically modified Penicillium moulds. Helps boost the users immunity gain speed and recovery from illness from bacterial and viral infections.</description>
@@ -13,6 +13,7 @@
       <graphicClass>Graphic_StackCount</graphicClass>
 	  <drawSize>0.85</drawSize>
     </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>400</WorkToMake>
@@ -29,7 +30,6 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>PenicillinHigh</hediffDef>
           <severity>1.0</severity>
-          <toleranceChemical>Penicillin</toleranceChemical>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -45,13 +45,8 @@
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
-        <chemical>Penicillin</chemical>
-        <addictiveness>0.0</addictiveness>
-        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
-        <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.0</largeOverdoseChance>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
       </li>
     </comps>
   </ThingDef>
@@ -81,82 +76,4 @@
       </stages>
   </HediffDef>
   
-  <!-- Ignore -->
-
-  <ChemicalDef>
-    <defName>Penicillin</defName>
-    <label>Penicillin</label>
-    <addictionHediff>PenicillinAddiction</addictionHediff>
-  </ChemicalDef>
-  
-  <NeedDef ParentName="DrugAddictionNeedBase">
-    <defName>Chemical_Penicillin</defName>
-    <needClass>Need_Chemical</needClass>
-    <label>Penicillin</label>
-    <description>Because of a Penicillin addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
-    <fallPerDay>0.333</fallPerDay>
-    <listPriority>45</listPriority>
-  </NeedDef>
-
-  <HediffDef ParentName="AddictionBase">
-    <defName>PenicillinAddiction</defName>
-    <label>Penicillin addiction</label>
-    <description>A chemical addiction to Penicillin class drugs. Long-term presence of Penicillin has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
-\nWithout regular doses of a Penicillin, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
-    <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>Chemical_SSRI</causesNeed>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.045</severityPerDay>
-        <showDaysToRecover>true</showDaysToRecover>
-      </li>
-    </comps>
-    <stages>
-	  <li>
-		<statOffsets>
-			<RestRateMultiplier>-0.15</RestRateMultiplier>
-			<MentalBreakThreshold>0.20</MentalBreakThreshold>
-		</statOffsets>
-      </li>
-      <li>
-      </li>
-      <li>
-        <label>withdrawal</label>
-		<socialFightChanceFactor>1.20</socialFightChanceFactor>
-      </li>
-    </stages>
-  </HediffDef>
-  
-  <ThoughtDef>
-    <defName>PenicillinWithdrawal</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>PenicillinAddiction</hediff>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <visible>false</visible>
-      </li>
-      <li>
-        <label>Penicillin withdrawal</label>
-        <description>My heart feels heavy. I can't really deal with my problems well.</description>
-        <baseMoodEffect>0</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-
-  <HediffDef ParentName="DrugToleranceBase">
-    <defName>PenicillinTolerance</defName>
-    <label>Penicillin tolerance</label>
-    <description>A built-up tolerance to Penicillin. The more severe this tolerance is, the more of a Penicillin it takes to get the same effect.</description>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.02</severityPerDay>
-      </li>
-      <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>Penicillin</chemical>
-      </li>
-    </comps>
-
-  </HediffDef>
-
 </Defs>

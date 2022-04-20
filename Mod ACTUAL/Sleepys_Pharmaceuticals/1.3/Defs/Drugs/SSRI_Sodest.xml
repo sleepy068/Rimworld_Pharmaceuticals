@@ -81,7 +81,7 @@
       <stages>
         <li>
 		  <statOffsets>
-				<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+				<MentalBreakThreshold>-0.12</MentalBreakThreshold>
 		  </statOffsets>
         </li>
       </stages>
@@ -136,7 +136,7 @@
 	  <li>
 		<statOffsets>
 			<RestRateMultiplier>-0.15</RestRateMultiplier>
-			<MentalBreakThreshold>0.20</MentalBreakThreshold>
+			<MentalBreakThreshold>0.10</MentalBreakThreshold>
 		</statOffsets>
       </li>
       <li>
@@ -160,7 +160,7 @@
       <li>
         <label>SSRI withdrawal</label>
         <description>My heart feels heavy. I can't really deal with my problems very well.</description>
-        <baseMoodEffect>-12</baseMoodEffect>
+        <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

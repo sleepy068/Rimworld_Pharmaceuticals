@@ -9,39 +9,55 @@
     </supportedVersions>
 
     <description>
-[img]https://i.imgur.com/JDaeY60.png[/img]
+[img]https://i.imgur.com/Fmo0K99.png[/img]
 [h2]Sleepy's Pharmaceuticals (v1.0.0)[/h2]
+I absolutely love the drug mechanics in this game, they are highly risky but can turn the tide if used correctly. I am trying to replicate the feel vanilla drugs have (i play with very few mods and want to keep the balance). They will have niche uses and can help in tough situations but ultimately they will be risky to use.
+
+Most drugs either have their own production pathway or use neutroamine. There is a heavy focus on this to make neutroamine even more useful and versatile. I also wanted to avoid bloating the game with highly detailed and accurate production chains. I am using my own naming conventions, so most drugs will not have their real counterpart names. Similar to the base game and so I can adjust where necessary.
+
+Feedback and suggestions are appreciated! Especially if anything feels overpowered.
 
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
+Add new drugs into the game, currently adds:
+- 9 Medical Drugs
+- 2 Social Drugs
+- 3 Hard Drugs
+
+You can find the full details of each here (I'll try and make sure this stays up to date but I'll be adding fun pictures into the description soon):
+https://github.com/sleepy068/Rimworld_Pharmaceuticals/wiki
 
 [img]https://i.imgur.com/ss8ZNXk.png[/img]
 [b]Roadmap:[/b]
+- Add mod options (so you can cherry pick the mod).
+- Add lots more pharmaceuticals from medical, social and hard drugs.
+- Balancing where needed.
 
 [img]https://i.imgur.com/YySbEPN.png[/img]
 [b]On Going Games:[/b]
 - Safe to add to an ongoing game
-- May cause issues if removed from an existing save
+- It will cause issues if removed from an existing save (consider starting a new game to see if you are happy with the content). You can try destroying all the content added but I'd be worried existing addictions might cause problems with world pawns.
 
 [b]Compatibility[/b]
-- My mod does not override any core content so should be compatible with any mods that change the medical system.
+- My mod does not override any core content so should be compatible with most if not any mods that change the medical system, override drugs or add drug content.
 
 [b]Integrated Compatibility:[/b]
-
-[b]Works Great With These Mods:[/b]
+None at the moment (hasn't been necessary).
 
 [img]https://i.imgur.com/gghc3iQ.png[/img]
 [b]Conflicts[/b]
+None yet detected.
 
 [img]https://i.imgur.com/31kQWwH.png[/img]
 [b]Known Issues[/b]
+No known issues.
 
 [img]https://i.imgur.com/WokZwPP.png[/img]
 [b]Language Support[/b]
+English (v1.0.0)(Developed in this Language)
 
 Latest Version:
 https://github.com/sleepy068/Rimworld_Pharmaceuticals
-    
     </description>
 
     <modDependencies>
