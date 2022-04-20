@@ -81,7 +81,7 @@
       <stages>
         <li>
 		  <statOffsets>
-				<MentalBreakThreshold>-0.12</MentalBreakThreshold>
+				<MentalBreakThreshold>-0.05</MentalBreakThreshold>
 		  </statOffsets>
         </li>
       </stages>
