@@ -10,7 +10,7 @@
 
     <description>
 [img]https://i.imgur.com/Fmo0K99.png[/img]
-[h2]Sleepy's Pharmaceuticals (v1.0.0)[/h2]
+[h2]Sleepy's Pharmaceuticals (v1.0.1)[/h2]
 I absolutely love the drug mechanics in this game, they are highly risky but can turn the tide if used correctly. I am trying to replicate the feel vanilla drugs have (i play with very few mods and want to keep the balance). They will have niche uses and can help in tough situations but ultimately they will be risky to use.
 
 Most drugs either have their own production pathway or use neutroamine. There is a heavy focus on this to make neutroamine even more useful and versatile. I also wanted to avoid bloating the game with highly detailed and accurate production chains. I am using my own naming conventions, so most drugs will not have their real counterpart names. Similar to the base game and so I can adjust where necessary.
@@ -19,18 +19,43 @@ Feedback and suggestions are appreciated! Especially if anything feels overpower
 
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
-Add new drugs into the game, currently adds:
+New Drugs:
 - 9 Medical Drugs
 - 2 Social Drugs
 - 3 Hard Drugs
 
-You can find the full details of each here (I'll try and make sure this stays up to date but I'll be adding fun pictures into the description soon):
+New plants (used to make some drugs)
+- Milkleaf Plant
+- Rimshroom
+- Penicillium (Can only be grown in Hydroponics and must be in the dark)
+
+[b]Medical Drugs[/b]
+[img]https://i.imgur.com/93HjotR.png[/img]
+[img]https://i.imgur.com/6JAipzF.png[/img]
+[img]https://i.imgur.com/Q7rys4o.png[/img]
+[img]https://i.imgur.com/D7ZP29f.png[/img]
+[img]https://i.imgur.com/1ajjjqI.png[/img]
+[img]https://i.imgur.com/iEFoVVG.png[/img]
+[img]https://i.imgur.com/0RYEBM1.png[/img]
+[img]https://i.imgur.com/w27VIXC.png[/img]
+[img]https://i.imgur.com/Af4Yf6P.png[/img]
+
+[b]Social Drugs[/b]
+[img]https://i.imgur.com/gk8TRN5.png[/img]
+[img]https://i.imgur.com/VYP9X4L.png[/img]
+
+[b]Hard Drugs[/b]
+[img]https://i.imgur.com/aMsm0Xl.png[/img]
+[img]https://i.imgur.com/kPOtL4C.png[/img]
+[img]https://i.imgur.com/0N1iSKW.png[/img]
+
+You can find the full details of each here, I'll try and this up to date for people who like exact data:
 https://github.com/sleepy068/Rimworld_Pharmaceuticals/wiki
 
 [img]https://i.imgur.com/ss8ZNXk.png[/img]
 [b]Roadmap:[/b]
 - Add mod options (so you can cherry pick the mod).
-- Add lots more pharmaceuticals from medical, social and hard drugs.
+- Add lots more pharmaceuticals from medical, social and hard drugs (i'll be adding away until I feel the mod adds enough to fill the gaps I believe are in the game, i'll avoid bloat, clones or repeat style additions).
 - Balancing where needed.
 
 [img]https://i.imgur.com/YySbEPN.png[/img]
