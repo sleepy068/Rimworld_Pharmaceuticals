@@ -10,7 +10,7 @@
 
     <description>
 [img]https://i.imgur.com/Fmo0K99.png[/img]
-[h2]Sleepy's Pharmaceuticals (v1.0.1)[/h2]
+[h2]Sleepy's Pharmaceuticals (v1.1.0)[/h2]
 I absolutely love the drug mechanics in this game, they are highly risky but can turn the tide if used correctly. I am trying to replicate the feel vanilla drugs have (i play with very few mods and want to keep the balance). They will have niche uses and can help in tough situations but ultimately they will be risky to use.
 
 Most drugs either have their own production pathway or use neutroamine. There is a heavy focus on this to make neutroamine even more useful and versatile. I also wanted to avoid bloating the game with highly detailed and accurate production chains. I am using my own naming conventions, so most drugs will not have their real counterpart names. Similar to the base game and so I can adjust where necessary.
@@ -20,14 +20,15 @@ Feedback and suggestions are appreciated! Especially if anything feels overpower
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
 New Drugs:
-- 9 Medical Drugs
+- 14 Medical Drugs
 - 2 Social Drugs
 - 3 Hard Drugs
+- 2 Cosmetics 
 
 New plants (used to make some drugs)
 - Milkleaf Plant
-- Rimshroom
-- Penicillium (Can only be grown in Hydroponics and must be in the dark)
+- Rimshroom (Must be in the dark)
+- Penicillium (Can only be grown in Hydroponics)
 
 [b]Medical Drugs[/b]
 [img]https://i.imgur.com/93HjotR.png[/img]
@@ -39,6 +40,11 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/0RYEBM1.png[/img]
 [img]https://i.imgur.com/w27VIXC.png[/img]
 [img]https://i.imgur.com/Af4Yf6P.png[/img]
+[img]https://i.imgur.com/nnfkDCu.png[/img]
+[img]https://i.imgur.com/QujCjno.png[/img]
+[img]https://i.imgur.com/7Ec2J3i.png[/img]
+[img]https://i.imgur.com/GFaIWP9.png[/img]
+[img]https://i.imgur.com/XNacnuz.png[/img]
 
 [b]Social Drugs[/b]
 [img]https://i.imgur.com/gk8TRN5.png[/img]
@@ -48,6 +54,10 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/aMsm0Xl.png[/img]
 [img]https://i.imgur.com/kPOtL4C.png[/img]
 [img]https://i.imgur.com/0N1iSKW.png[/img]
+
+[b]Cosmetics[/b]
+[img]https://i.imgur.com/gZ2BHcv.png[/img]
+[img]https://i.imgur.com/mfc1f25.png[/img]
 
 You can find the full details of each here, I'll try and this up to date for people who like exact data:
 https://github.com/sleepy068/Rimworld_Pharmaceuticals/wiki
