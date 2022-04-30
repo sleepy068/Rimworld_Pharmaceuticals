@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_PenicillinOint</defName>
+    <label>penicillin ointment</label>
+    <description>A modified version of Penicillin obtained from genetically modified Penicillium moulds. Grounded up and turned into an ointment. Helps boost the users healing speed and recovery from injuries.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PenicillinOintHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_PenicilOint</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>13</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+	  <ingestCommandString>Use {0}</ingestCommandString>
+      <ingestReportString>Using {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PenicillinOintHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>SLP_SupportDrugs</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <SLP_Penicillium>12</SLP_Penicillium>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>PenicillinOintHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>penicillin ointment</label>
+    <labelNoun>penicillin ointment</labelNoun>
+    <description>Penicillin ointment on the skin. It the body heal faster.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+			<statOffsets>
+				<InjuryHealingFactor>0.05</InjuryHealingFactor>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+</Defs>

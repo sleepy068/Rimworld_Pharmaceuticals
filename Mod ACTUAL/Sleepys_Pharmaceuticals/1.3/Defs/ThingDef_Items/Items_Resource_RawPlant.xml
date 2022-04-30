@@ -53,4 +53,30 @@
     </ingestible>
   </ThingDef>
   
+  <ThingDef ParentName="RoughPlantBase">
+    <defName>SLP_AloeVera</defName>
+    <label>aloe vera</label>
+    <description>Pieces of the spiky Aloe Vera leaves. Can be refined into antibiotics and cosmetics.</description>
+    <graphicData>
+      <texPath>Things/Item/Raw/SLP_Plant_Box_AloeVera</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.0</MarketValue>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+  
 </Defs>

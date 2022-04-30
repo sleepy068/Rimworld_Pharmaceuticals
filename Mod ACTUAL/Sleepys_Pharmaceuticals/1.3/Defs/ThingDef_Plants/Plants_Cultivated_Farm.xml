@@ -113,4 +113,39 @@
     </plant>
   </ThingDef>
   
+  <!--==== Aloe Vera ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_AloeVera</defName>
+    <label>aloe vera</label>
+    <description>Aloe is a cactus-like plant that grows in hot, dry climates.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+	  <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_AloeVera</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+	  <fertilityMin>0.3</fertilityMin>
+	  <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>9</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_AloeVera</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
 </Defs>
