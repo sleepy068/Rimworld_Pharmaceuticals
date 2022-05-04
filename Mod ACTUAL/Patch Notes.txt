@@ -1,0 +1,15 @@
+Update v1.2.0
+
+Additions:
+
+
+Changes:
+Adjusted aloe vera ointment injury heal factor from 5% to 7.5%
+Adjusted penicillin ointment injury heal factor from 5% to 7.5%
+Adjusted fusidic acid ointment injury heal factor from 10% to 15%
+
+Localisation:
+N/A
+
+Bug Fixes:
+N/A
