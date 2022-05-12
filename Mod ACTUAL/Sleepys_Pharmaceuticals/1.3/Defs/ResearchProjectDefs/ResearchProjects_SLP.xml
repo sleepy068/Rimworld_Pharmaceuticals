@@ -112,5 +112,33 @@
     <researchViewX>4.00</researchViewX>
     <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
+  
+    <ResearchProjectDef>
+    <defName>ShboombloomSynthesis</defName>
+    <label>Shboombloom Synthesis</label>
+    <description>Refine the nectar from shboombloom flowers into various drugs from hard drugs to those for medical support.</description>
+    <baseCost>750</baseCost>
+    <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>5.00</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>CombatDrugSynthesis</defName>
+    <label>Combat Drug Synthesis</label>
+    <description>The refinement and synthesis of combat support drugs.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>9.00</researchViewX>
+    <researchViewY>5.00</researchViewY>
+  </ResearchProjectDef>
 
 </Defs>

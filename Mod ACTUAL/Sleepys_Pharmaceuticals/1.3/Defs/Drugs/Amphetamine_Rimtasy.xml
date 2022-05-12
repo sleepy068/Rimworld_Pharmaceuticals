@@ -65,7 +65,7 @@
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0.12~0.35</overdoseSeverityOffset>
         <largeOverdoseChance>0.010</largeOverdoseChance>
       </li>
     </comps>

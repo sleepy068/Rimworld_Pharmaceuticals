@@ -16,8 +16,8 @@
 	<socialPropernessMatters>false</socialPropernessMatters>
     <rotatable>false</rotatable>
     <statBases>
-      <WorkToMake>650</WorkToMake>
-      <MarketValue>3</MarketValue>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>43</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
@@ -46,7 +46,7 @@
     <comps>
       <li Class="CompProperties_Drug">
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0</overdoseSeverityOffset>
       </li>
     </comps>
   </ThingDef>

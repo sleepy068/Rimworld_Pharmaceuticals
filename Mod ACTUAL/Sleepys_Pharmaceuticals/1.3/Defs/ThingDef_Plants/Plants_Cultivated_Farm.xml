@@ -148,4 +148,41 @@
     </plant>
   </ThingDef>
   
+  <!--==== Shboombloom ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_Shboombloom</defName>
+    <label>shboombloom</label>
+    <description>A genetically engineered plant. Artificially made to try and make a hardier drug producing plant that could compete with other hard drugs and neutroamine manufacturing plants on mid-worlds. The flowers can be harvested for various alkaloids and chemicals and later processed into drugs or drug producing compounds.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+	  <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Mature_Shboombloom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Shboombloom</immatureGraphicPath>
+	  <fertilityMin>0.7</fertilityMin>
+	  <fertilitySensitivity>1.0</fertilitySensitivity>
+      <growDays>8</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_ShboombloomNectar</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>1</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
 </Defs>

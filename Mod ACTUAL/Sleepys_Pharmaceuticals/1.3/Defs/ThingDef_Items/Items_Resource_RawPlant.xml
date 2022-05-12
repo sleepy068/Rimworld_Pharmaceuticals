@@ -79,4 +79,30 @@
     </ingestible>
   </ThingDef>
   
+   <ThingDef ParentName="RoughPlantBase">
+    <defName>SLP_ShboombloomNectar</defName>
+    <label>shboombloom nectar</label>
+    <description>Flowers containing the nectar of the shboombloom plant. Can be refined into drugs and precursors materials.</description>
+    <graphicData>
+      <texPath>Things/Item/Raw/SLP_Plant_Box_ShboomBloomNectar</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+    </ingestible>
+  </ThingDef>
+  
 </Defs>

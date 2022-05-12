@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Hunterkiller</defName>
+    <label>hunterkiller</label>
+    <description>A synthetic performance-enhancing drug developed in competition against go-juice. Adversely a bust in terms of competition, military scientists where never able to recreate the similar effects of go-juice by supplementing the hard drug ingredients. Instead, code named hunterkiller, significantly reduces the users empathy, to a frightening extent. Hunterkiller also suppresses the users appetite and need for sleep. /n/n The drug was quite successful during initial trials at preventing soldiers from been worn down during extended tours however it has serious drawbacks. The drug's effects on brain chemistry were alarmingly severe, causing addiction easily. Fortunately, these effects weren't overly problematic and short lasting but withdrawal like symptoms took quite some time to appear.</description>
+    <descriptionHyperlinks>
+      <HediffDef>HunterkillerHigh</HediffDef>
+	  <HediffDef>HunterkillerTolerance</HediffDef>
+      <HediffDef>HunterkillerAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Hunterkiller</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.83</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>43</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.50</joy>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HunterkillerHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Hunterkiller</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HunterkillerTolerance</hediffDef>
+          <severity>0.10</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.2</offset>
+          <toleranceChemical>Hunterkiller</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+          <offset>0.25</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>CombatDrugSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>4</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Hunterkiller</chemical>
+        <addictiveness>0.1</addictiveness>
+        <existingAddictionSeverityOffset>0.25</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>HunterkillerHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on hunterkiller</label>
+    <labelNoun>a hunterkiller high</labelNoun>
+    <description>Hunterkiller in the bloodstream. A combat enhancing drug that reduces the need for food, rest and empathy.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.75</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <restFallFactor>0.60</restFallFactor>
+		  <statOffsets>
+				<GlobalLearningFactor>-0.75</GlobalLearningFactor>
+				<SocialImpact>-0.50</SocialImpact>
+				<HungerRateMultiplier>-0.60</HungerRateMultiplier>
+				<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>HunterkillerHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HunterkillerHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on hunterkiller</label>
+        <description>I can't really think straight and I don't know what is happening but I feel like I must kill, no matter what enemy is in my way.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!-- Hunterkiller addiction -->
+
+  <ChemicalDef>
+    <defName>Hunterkiller</defName>
+    <label>hunterkiller</label>
+    <addictionHediff>HunterkillerAddiction</addictionHediff>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Hunterkiller</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>hunterkiller</label>
+    <description>Because of a hunterkiller addiction, this person needs to periodically consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.166</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>HunterkillerAddiction</defName>
+    <label>hunterkiller addiction</label>
+    <description>A chemical addiction to hunterkiller. Even short-term presence of hunterkiller in the bloodstream can have this effect. The effect has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of hunterkiller, withdrawal symptoms will begin. However, a somewhat short abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Hunterkiller</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.10</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.1</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>HunterkillerWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HunterkillerAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>hunterkiller withdrawal</label>
+        <description>I keep getting flash backs of horrific memories. What did I do when I took this drug? How long will it take until I feel normal again?</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>HunterkillerTolerance</defName>
+    <label>hunterkiller tolerance</label>
+    <description>A built-up tolerance to hunterkiller. The more severe this tolerance is, the more hunterkiller it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Hunterkiller</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 240)</li>
+            <li>(1, 180)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 120)</li>
+            <li>(1, 90)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+</Defs>

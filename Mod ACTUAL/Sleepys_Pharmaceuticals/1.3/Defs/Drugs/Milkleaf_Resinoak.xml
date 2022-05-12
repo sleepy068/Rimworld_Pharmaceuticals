@@ -74,7 +74,7 @@
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0.05~0.20</overdoseSeverityOffset>
         <largeOverdoseChance>0.005</largeOverdoseChance>
       </li>
     </comps>
@@ -162,7 +162,6 @@
       </li>
       <li>
         <label>withdrawal</label>
-        <painFactor>1</painFactor>
         <restFallFactorOffset>0.2</restFallFactorOffset>
         <capMods>
           <li>

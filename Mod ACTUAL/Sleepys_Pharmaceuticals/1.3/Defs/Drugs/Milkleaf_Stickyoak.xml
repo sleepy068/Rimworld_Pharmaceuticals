@@ -19,7 +19,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>400</WorkToMake>
-      <MarketValue>34</MarketValue>
+      <MarketValue>37</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
@@ -75,8 +75,8 @@
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>200</listOrder>
-        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
-        <largeOverdoseChance>0.020</largeOverdoseChance>
+        <overdoseSeverityOffset>0.12~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.012</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>

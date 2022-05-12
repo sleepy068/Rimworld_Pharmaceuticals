@@ -7,9 +7,15 @@ Changes:
 Adjusted aloe vera ointment injury heal factor from 5% to 7.5%
 Adjusted penicillin ointment injury heal factor from 5% to 7.5%
 Adjusted fusidic acid ointment injury heal factor from 10% to 15%
+Adjusted Sticky Oak cost from 34 to 37.
+Adjusted Perfumes value from 34 to 44
+Balanced all drugs Overdose Severity Offset
+Reduce Large Overdose Chance for a lot of drugs (Offset adjusted as such)
+Tweaked Perfumes Work to Make
+
 
 Localisation:
 N/A
 
 Bug Fixes:
-N/A
+Perfume value was 3 by accident, adjusted in changes
