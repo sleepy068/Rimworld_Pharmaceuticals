@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Daywake</defName>
     <label>daywake</label>
-    <description></description>
+    <description>A moderately powerful stimulant that helps the user stay awake for longer. While effective, the brain can quickly become dependant on its effects resulting in addiction. The brain will just as quickly remove this dependence after a short time though and the effects are very mild.</description>
     <descriptionHyperlinks>
       <HediffDef>DaywakeHigh</HediffDef>
 	  <HediffDef>DaywakeTolerance</HediffDef>
@@ -18,8 +18,8 @@
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
-      <WorkToMake>400</WorkToMake>
-      <MarketValue>43</MarketValue>
+      <WorkToMake>750</WorkToMake>
+      <MarketValue>10</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
@@ -36,13 +36,8 @@
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>DaywakeTolerance</hediffDef>
-          <severity>0.04</severity>
+          <severity>0.20</severity>
           <divideByBodySize>true</divideByBodySize>
-        </li>
-        <li Class="IngestionOutcomeDoer_OffsetNeed">
-          <need>Rest</need>
-          <offset>-0.1</offset>
-          <toleranceChemical>Daywake</toleranceChemical>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -109,33 +104,33 @@
   </ThoughtDef>
   
   
-  <!-- Milkleaf addiction -->
+  <!-- Daywake addiction -->
 
   <ChemicalDef>
-    <defName>Milkleaf</defName>
-    <label>milkleaf</label>
-    <addictionHediff>MilkleafAddiction</addictionHediff>
+    <defName>Daywake</defName>
+    <label>daywake</label>
+    <addictionHediff>DaywakeAddiction</addictionHediff>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
-    <defName>Chemical_Milkleaf</defName>
+    <defName>Chemical_Daywake</defName>
     <needClass>Need_Chemical</needClass>
-    <label>milkleaf</label>
-    <description>Because of a milkleaf addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
-    <fallPerDay>0.333</fallPerDay>
+    <label>daywake</label>
+    <description>Because of a daywake addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.666</fallPerDay>
     <listPriority>45</listPriority>
   </NeedDef>
 
   <HediffDef ParentName="AddictionBase">
-    <defName>MilkleafAddiction</defName>
-    <label>milkleaf addiction</label>
-    <description>A chemical addiction to milkleaf. Long-term presence of milkleaf has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
-\nWithout regular doses of milkleaf, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <defName>DaywakeAddiction</defName>
+    <label>daywake addiction</label>
+    <description>A chemical addiction to daywake. Short-term presence of daywake has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of daywake, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>Chemical_Milkleaf</causesNeed>
+    <causesNeed>Chemical_Daywake</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.045</severityPerDay>
+        <severityPerDay>-0.125</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -144,62 +139,40 @@
       </li>
       <li>
         <label>withdrawal</label>
-        <restFallFactorOffset>0.2</restFallFactorOffset>
+        <restFallFactorOffset>0.15</restFallFactorOffset>
         <capMods>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.30</offset>
-          </li>
         </capMods>
-        <mentalStateGivers>
-          <li>
-            <mentalState>Binging_DrugExtreme</mentalState>
-            <mtbDays>60</mtbDays>
-          </li>
-          <li>
-            <mentalState>Wander_Psychotic</mentalState>
-            <mtbDays>20</mtbDays>
-          </li>
-        </mentalStateGivers>
       </li>
     </stages>
   </HediffDef>
   
   <ThoughtDef>
-    <defName>MilkleafWithdrawal</defName>
+    <defName>DaywakeWithdrawal</defName>
     <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>MilkleafAddiction</hediff>
+    <hediff>DaywakeAddiction</hediff>
     <validWhileDespawned>true</validWhileDespawned>
     <stages>
       <li>
         <visible>false</visible>
       </li>
       <li>
-        <label>Milkleaf withdrawal</label>
-        <description>I feel so tired and heavy. I can't stop thinking about milkleaf. I feel like I can't breathe. I just want to feel normal again and I'd do almost anything to make that happen...</description>
-        <baseMoodEffect>-35</baseMoodEffect>
+        <label>daywake withdrawal</label>
+        <description>Uhhh... I feel tired and I just don't feel like sleep is enough...</description>
+        <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
 
   <HediffDef ParentName="DrugToleranceBase">
-    <defName>MilkleafTolerance</defName>
-    <label>milkleaf tolerance</label>
-    <description>A built-up tolerance to milkleaf. The more severe this tolerance is, the more milkleaf it takes to get the same effect.</description>
+    <defName>DaywakeTolerance</defName>
+    <label>daywake tolerance</label>
+    <description>A built-up tolerance to daywake. The more severe this tolerance is, the more daywake it takes to get the same effect.</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
+        <severityPerDay>-0.040</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>Milkleaf</chemical>
+        <chemical>Daywake</chemical>
       </li>
     </comps>
     <hediffGivers>
@@ -208,8 +181,8 @@
         <severityToMtbDaysCurve>
           <points>
             <li>(0.45, 99999)</li>
-            <li>(0.5, 240)</li>
-            <li>(1, 180)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
           </points>
         </severityToMtbDaysCurve>
         <partsToAffect>
@@ -221,8 +194,8 @@
         <severityToMtbDaysCurve>
           <points>
             <li>(0.45, 99999)</li>
-            <li>(0.5, 120)</li>
-            <li>(1, 90)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
           </points>
         </severityToMtbDaysCurve>
         <partsToAffect>

@@ -1,7 +1,10 @@
 Update v1.2.0
 
 Additions:
-
+2 Hard Drugs
+2 Medical Drugs
+1 Precusor Material
+1 Plant
 
 Changes:
 Adjusted aloe vera ointment injury heal factor from 5% to 7.5%

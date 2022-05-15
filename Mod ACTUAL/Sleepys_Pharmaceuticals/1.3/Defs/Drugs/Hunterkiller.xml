@@ -152,7 +152,7 @@
     <causesNeed>Chemical_Hunterkiller</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.10</severityPerDay>
+        <severityPerDay>-0.0845</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -187,7 +187,7 @@
       </li>
       <li>
         <label>hunterkiller withdrawal</label>
-        <description>I keep getting flash backs of horrific memories. What did I do when I took this drug? How long will it take until I feel normal again?</description>
+        <description>I keep getting flash backs of horrific memories. What did I do when I took this drug? How long will it take until I feel normal again!?</description>
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>

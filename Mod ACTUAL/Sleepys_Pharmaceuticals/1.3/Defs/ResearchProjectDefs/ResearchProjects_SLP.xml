@@ -113,7 +113,7 @@
     <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
   
-    <ResearchProjectDef>
+  <ResearchProjectDef>
     <defName>ShboombloomSynthesis</defName>
     <label>Shboombloom Synthesis</label>
     <description>Refine the nectar from shboombloom flowers into various drugs from hard drugs to those for medical support.</description>
@@ -123,8 +123,8 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>5.00</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef>
@@ -137,8 +137,8 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>9.00</researchViewX>
-    <researchViewY>5.00</researchViewY>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>3.00</researchViewY>
   </ResearchProjectDef>
 
 </Defs>
