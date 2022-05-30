@@ -119,4 +119,69 @@
     </products>
   </RecipeDef>
 
+<ThingDef ParentName="MedicineBase">
+    <defName>SLP_MedicineAmoxi</defName>
+    <label>amoxi medicine</label>
+    <description>A kit of industrial-era medical equipment. It contains basic drugs, tools for suturing and bone setting, diagnostic devices, and various pads and fluids. While it is made from a different precursor it is still as effective as standard industrial grade medicine.</description>
+    <graphicData>
+      <texPath>Things/Item/Medicine/SLP_Medicine_AmoxiMedicine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MarketValue>18</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.7</Flammability>
+      <MedicalPotency>1.00</MedicalPotency>
+      <MedicalQualityMax>1.00</MedicalQualityMax>
+      <DeteriorationRate>2</DeteriorationRate>
+      <WorkToMake>850</WorkToMake>
+    </statBases>
+    <costList>
+      <MedicineHerbal>1</MedicineHerbal>
+      <SLP_Amoxiclite>1</SLP_Amoxiclite>
+      <Cloth>3</Cloth>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>ShboombloomSynthesis</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+        <Intellectual>3</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+    <allowedArchonexusCount>10</allowedArchonexusCount>
+  </ThingDef>
+
+<ThingDef ParentName="MedicineBase">
+    <defName>SLP_MedicineClarketech</defName>
+    <label>clarketech medicine</label>
+    <description>A kit of godtech-era medical equipment, even the brightest minds have no idea where or how it was made. It contains hyper advanced drugs, nanite and programmable matter healing tools, various hyper tech diagnostic devices with inbuilt tutorials and guidance systems, various pads and fluids with basic and simple 'A, B, C' labels and a sapient guidance AI that will tell the user precisely what to use and when to use it. This technology is so advanced that it is almost indistinguishable from magic.</description>
+    <graphicData>
+      <texPath>Things/Item/Medicine/SLP_Medicine_ClarketechMedicine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.85</drawSize>
+    </graphicData>
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>70</MarketValue>
+      <Mass>0.50</Mass>
+      <Flammability>0.7</Flammability>
+      <MedicalPotency>2.20</MedicalPotency>
+      <MedicalQualityMax>1.60</MedicalQualityMax>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>5</allowedArchonexusCount>
+</ThingDef>
+
+
 </Defs>

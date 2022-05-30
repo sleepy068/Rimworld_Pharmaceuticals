@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_FusidicAcid</defName>
-    <label>fusidic acid ointment</label>
-    <description>Fusidic acid ointment is an antibiotic that has been synthesised into a cream. Helps boost the users healing speed and recovery from injuries.</description>
+    <label>fusidic balm</label>
+    <description>Fusidic acid ointment (aka fusidic balm) is an antibiotic that has been synthesised into a cream. Helps boost the users healing speed and recovery from injuries.</description>
     <descriptionHyperlinks>
       <HediffDef>FusidicAcidHigh</HediffDef>
     </descriptionHyperlinks>
@@ -63,14 +63,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-2.5</severityPerDay>
+        <severityPerDay>-0.75</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
       <stages>
         <li>
 			<statOffsets>
-				<InjuryHealingFactor>0.15</InjuryHealingFactor>
+				<InjuryHealingFactor>0.30</InjuryHealingFactor>
 		  </statOffsets>
         </li>
       </stages>

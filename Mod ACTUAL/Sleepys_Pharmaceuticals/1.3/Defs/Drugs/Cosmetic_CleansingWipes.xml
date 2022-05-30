@@ -3,7 +3,7 @@
 
   <ThingDef ParentName="DrugBase">
     <defName>SLP_CleansingWipes</defName>
-    <label>facial cleansing wipes</label>
+    <label>cleansing wipes</label>
     <description>Softer than silk and merciless on grime of the rim, these Skin Cleansing Facial wipes are a gentle cleanser that lifts away grease, impurities and even make-up effectively. Making the user feel refreshed, clean and happier.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_CleanWipeHigh</HediffDef>

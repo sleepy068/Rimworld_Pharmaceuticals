@@ -54,7 +54,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.6</severityPerDay>
+        <severityPerDay>-1.5</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>

@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_PenicillinOint</defName>
-    <label>penicillin ointment</label>
-    <description>A modified version of Penicillin obtained from genetically modified Penicillium moulds. Grounded up and turned into an ointment. Helps boost the users healing speed and recovery from injuries.</description>
+    <label>penicillin balm</label>
+    <description>A modified version of Penicillin obtained from genetically modified Penicillium moulds. Grounded up and turned into penicillin ointment (aka penicillin balm). Helps boost the users healing speed and recovery from injuries.</description>
     <descriptionHyperlinks>
       <HediffDef>PenicillinOintHigh</HediffDef>
     </descriptionHyperlinks>
@@ -63,14 +63,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-3.0</severityPerDay>
+        <severityPerDay>-1.5</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
       <stages>
         <li>
 			<statOffsets>
-				<InjuryHealingFactor>0.075</InjuryHealingFactor>
+				<InjuryHealingFactor>0.15</InjuryHealingFactor>
 		  </statOffsets>
         </li>
       </stages>

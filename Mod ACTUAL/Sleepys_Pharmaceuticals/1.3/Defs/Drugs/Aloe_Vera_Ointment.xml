@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_AloeVeraOint</defName>
-    <label>aloe vera ointment</label>
-    <description>Aloe vera ointment is an antibiotic that has been processed into an ointment. Helps boost the users healing speed and recovery from injuries.</description>
+    <label>aloe vera balm</label>
+    <description>Aloe vera ointment (aka, aloe vera balm) is an antibiotic that has been processed into an ointment. Helps boost the users healing speed and recovery from injuries.</description>
     <descriptionHyperlinks>
       <HediffDef>AloeVeraHigh</HediffDef>
     </descriptionHyperlinks>
@@ -63,14 +63,14 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-3.0</severityPerDay>
+        <severityPerDay>-1.5</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
       <stages>
         <li>
 			<statOffsets>
-				<InjuryHealingFactor>0.075</InjuryHealingFactor>
+				<InjuryHealingFactor>0.15</InjuryHealingFactor>
 		  </statOffsets>
         </li>
       </stages>

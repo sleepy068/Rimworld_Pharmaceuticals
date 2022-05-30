@@ -1,24 +1,14 @@
-Update v1.2.0
+Update v1.3.0
 
 Additions:
-2 Hard Drugs
-2 Medical Drugs
-1 Precusor Material
-1 Plant
+
 
 Changes:
-Adjusted aloe vera ointment injury heal factor from 5% to 7.5%
-Adjusted penicillin ointment injury heal factor from 5% to 7.5%
-Adjusted fusidic acid ointment injury heal factor from 10% to 15%
-Adjusted Sticky Oak cost from 34 to 37.
-Adjusted Perfumes value from 34 to 44
-Balanced all drugs Overdose Severity Offset
-Reduce Large Overdose Chance for a lot of drugs (Offset adjusted as such)
-Tweaked Perfumes Work to Make
-
+Adjusted Spira to last slightly longer
+Adjusted Daywake to last slight longer
 
 Localisation:
-N/A
+Fixed minor grammer mistake with Amoxi Medicine
+
 
 Bug Fixes:
-Perfume value was 3 by accident, adjusted in changes
