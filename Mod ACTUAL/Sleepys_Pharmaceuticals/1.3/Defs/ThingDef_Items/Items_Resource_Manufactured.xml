@@ -65,7 +65,7 @@
     <label>amoxiclite </label>
     <description>A colourless, salty-tasting vicious liquid, it is a precursor to and a metabolite of a handful of useful drugs.</description>
     <graphicData>
-      <texPath>Things/Item/Drug/SLP_Drug_Amoxiclite</texPath>
+      <texPath>Things/Item/Drug/SLP_Precursor_Amoxiclite</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
       <drawSize>0.83</drawSize>
     </graphicData>

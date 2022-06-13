@@ -93,7 +93,7 @@
       <li>
         <label>calmed by ashifer</label>
         <description>I just feel happier.</description>
-        <baseMoodEffect>5</baseMoodEffect>
+        <baseMoodEffect>7</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

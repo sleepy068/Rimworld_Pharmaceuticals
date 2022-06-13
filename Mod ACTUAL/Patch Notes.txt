@@ -1,11 +1,15 @@
 Update v1.3.0
 
 Additions:
-
+Added 3 Medical Drugs
+Added 1 Hard Drugs
+Added new sounds
 
 Changes:
 Adjusted Spira to last slightly longer
 Adjusted Daywake to last slight longer
+Adjusted Sodest Mental Break Reduction from 5% to 7.5%
+Adjusted Ashifer Mood Boost from 5 to 7
 
 Localisation:
 Fixed minor grammer mistake with Amoxi Medicine

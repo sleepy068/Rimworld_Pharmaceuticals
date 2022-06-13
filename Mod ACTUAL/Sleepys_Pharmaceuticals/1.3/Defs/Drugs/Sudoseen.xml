@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Sudoseen</defName>
+    <label>sudoseen</label>
+    <description>An effective bronchodilator that helps the user breath more effectively. Bronchodilators are a type of medication that make breathing easier by relaxing the muscles in the lungs and widening the airways (bronchi).</description>
+    <descriptionHyperlinks>
+      <HediffDef>SudoseenHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Sudoseen</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>750</WorkToMake>
+      <MarketValue>5</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>SLP_Ingest_Puffer</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SudoseenHigh</hediffDef>
+          <severity>0.75</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.04~0.09</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SudoseenHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>sudoseen relaxation</label>
+    <labelNoun>sudoseen relaxation</labelNoun>
+    <description>Sudoseen in the bloodstream. It is very effective at helping the user breath better.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.7</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <capMods>
+		  <li>
+              <capacity>Breathing</capacity>
+              <offset>0.25</offset>
+          </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SudoseenHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SudoseenHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>sudoseen relaxation</label>
+        <description>I feel good! I can breath clear and easy.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+   <RecipeDef>
+    <defName>Make_Sudoseen</defName>
+    <label>make sudoseen x2</label>
+    <description>Make sudoseen from amoxiclite.</description>
+    <jobString>Making sudoseen.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>SLP_SupportDrugs</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+    </recipeUsers>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>750</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>SLP_Amoxiclite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SLP_Amoxiclite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SLP_Sudoseen>2</SLP_Sudoseen>
+    </products>
+  </RecipeDef>
+  
+  
+</Defs>

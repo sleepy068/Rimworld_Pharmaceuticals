@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Acetylshoom</defName>
+    <label>acetylshoom</label>
+    <description>Extracted alkaloid from the nectar of the Shboombloom flower that has been further refined by acetylation. Acetylshoom is known for its ability for producing an extremely potent rush of pleasurable feelings, reducing the need for rest for a short time and even reducing pain somewhat.</description>
+    <descriptionHyperlinks>
+      <HediffDef>AcetylshoomHigh</HediffDef>
+	  <HediffDef>ShboombloomTolerance</HediffDef>
+      <HediffDef>ShboombloomAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Acetylshoom</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.60</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1600</WorkToMake>
+      <MarketValue>30</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.85</joy>
+      <drugCategory>Hard</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Snort {0}</ingestCommandString>
+      <ingestReportString>Snorting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AcetylshoomHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Shboombloom</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ShboombloomTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>ShboombloomSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <SLP_ShboombloomNectar>8</SLP_ShboombloomNectar>
+	  <SLP_Amoxiclite>1</SLP_Amoxiclite>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Shboombloom</chemical>
+        <addictiveness>0.013</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>200</listOrder>
+        <overdoseSeverityOffset>0.10~0.22</overdoseSeverityOffset>
+        <largeOverdoseChance>0.010</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>AcetylshoomHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on acetylshoom</label>
+    <labelNoun>a acetylshoom high</labelNoun>
+    <description>Acetylshoom in the bloodstream. Produces a powerful rush of pleasurable feelings.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.25</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <restFallFactor>0.60</restFallFactor>
+		  <painFactor>0.80</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.20</offset>
+            </li>
+			<li>
+              <capacity>Moving</capacity>
+              <offset>0.10</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>AcetylshoomHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AcetylshoomHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on acetylshoom</label>
+        <description>I feel incredible, powerful and ready to take on the world!</description>
+        <baseMoodEffect>35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>
