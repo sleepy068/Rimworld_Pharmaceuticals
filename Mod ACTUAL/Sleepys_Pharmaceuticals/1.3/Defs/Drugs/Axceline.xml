@@ -35,7 +35,7 @@
     </ingestible>
     <comps>
       <li Class="CompProperties_Drug">
-        <listOrder>200</listOrder>
+        <listOrder>460</listOrder>
         <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
         <largeOverdoseChance>0.001</largeOverdoseChance>
       </li>

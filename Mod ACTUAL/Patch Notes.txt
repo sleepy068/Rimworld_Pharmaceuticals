@@ -6,6 +6,7 @@ Added 1 Hard Drugs
 Added new sounds
 
 Changes:
+Sorted the drugs in the Drugs tab (in better order now)
 Adjusted Spira to last slightly longer
 Adjusted Daywake to last slight longer
 Adjusted Sodest Mental Break Reduction from 5% to 7.5%
@@ -16,3 +17,4 @@ Fixed minor grammer mistake with Amoxi Medicine
 
 
 Bug Fixes:
+Epi didnt have a food type and was getting the default.

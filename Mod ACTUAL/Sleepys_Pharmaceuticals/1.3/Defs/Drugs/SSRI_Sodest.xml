@@ -57,7 +57,7 @@
 		<minToleranceToAddict>0.10</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
-        <listOrder>200</listOrder>
+        <listOrder>490</listOrder>
       </li>
     </comps>
   </ThingDef>

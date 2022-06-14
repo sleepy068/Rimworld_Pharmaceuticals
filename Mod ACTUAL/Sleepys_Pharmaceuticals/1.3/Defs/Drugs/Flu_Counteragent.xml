@@ -5,7 +5,7 @@
     <defName>Flu_Counteragent</defName>
     <label>flu counteragent</label>
     <description>A vaccine that protects against infection by influenza viruses. Must be taken every seven days to remain effective.\n\nThis drug only prevents the user getting the flu. It does not cure existing infections - even those that are not yet discovered.</description>
-    <descriptionHyperlinks><HediffDef>PenoxycylineHigh</HediffDef></descriptionHyperlinks>
+    <descriptionHyperlinks><HediffDef>FluVacHigh</HediffDef></descriptionHyperlinks>
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Drug_FluCounteragent</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -34,7 +34,6 @@
       <ingestReportString>Injecting {0}.</ingestReportString>
       <useEatingSpeedStat>false</useEatingSpeedStat>
       <chairSearchRadius>0</chairSearchRadius>
-      <drugCategory>Medical</drugCategory>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>FluVacHigh</hediffDef>

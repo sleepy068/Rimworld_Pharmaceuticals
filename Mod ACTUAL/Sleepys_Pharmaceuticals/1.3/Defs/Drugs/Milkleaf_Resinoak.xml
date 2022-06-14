@@ -73,7 +73,7 @@
         <addictiveness>0.02</addictiveness>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
-        <listOrder>200</listOrder>
+        <listOrder>300</listOrder>
         <overdoseSeverityOffset>0.05~0.20</overdoseSeverityOffset>
         <largeOverdoseChance>0.005</largeOverdoseChance>
       </li>

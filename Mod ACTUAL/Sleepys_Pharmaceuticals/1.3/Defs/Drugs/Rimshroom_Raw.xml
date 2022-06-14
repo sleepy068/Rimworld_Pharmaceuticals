@@ -46,7 +46,7 @@
         <rotDestroys>true</rotDestroys>
       </li>
       <li Class="CompProperties_Drug">
-        <listOrder>200</listOrder>
+        <listOrder>21</listOrder>
       </li>
     </comps>
     <allowedArchonexusCount>20</allowedArchonexusCount>
