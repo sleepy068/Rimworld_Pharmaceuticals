@@ -25,7 +25,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>0.00</researchViewY>
   </ResearchProjectDef>
   
@@ -39,7 +39,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>1.00</researchViewY>
   </ResearchProjectDef>
   
@@ -53,7 +53,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>2.00</researchViewY>
   </ResearchProjectDef>
   
@@ -67,7 +67,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>3.00</researchViewY>
   </ResearchProjectDef>
   
@@ -81,7 +81,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
   
@@ -95,7 +95,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>3.00</researchViewX>
+    <researchViewX>1.00</researchViewX>
     <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
   
@@ -109,7 +109,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>4.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>5.00</researchViewY>
   </ResearchProjectDef>
   
@@ -123,7 +123,7 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>4.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
   
@@ -137,8 +137,23 @@
     <prerequisites>
       <li>DrugProduction</li>
     </prerequisites>
-    <researchViewX>4.00</researchViewX>
+    <researchViewX>3.00</researchViewX>
     <researchViewY>3.00</researchViewY>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>AmoxicliteSynthesis</defName>
+    <label>Amoxiclite Base Drugs</label>
+    <description>Refine the precursor Amoxiclite into various drugs.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+	<tab>SLP_PHARMA</tab>
+    <prerequisites>
+      <li>DrugProduction</li>
+	  <li>ShboombloomSynthesis</li>
+    </prerequisites>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
   </ResearchProjectDef>
 
 </Defs>

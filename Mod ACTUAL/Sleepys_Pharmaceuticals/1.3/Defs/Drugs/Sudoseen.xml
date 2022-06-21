@@ -90,7 +90,7 @@
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
     <workSkill>Cooking</workSkill>
     <effectWorking>Cook</effectWorking>
-	<researchPrerequisite>SLP_SupportDrugs</researchPrerequisite>
+	<researchPrerequisite>AmoxicliteSynthesis</researchPrerequisite>
     <recipeUsers>
         <li>DrugLab</li>
     </recipeUsers>

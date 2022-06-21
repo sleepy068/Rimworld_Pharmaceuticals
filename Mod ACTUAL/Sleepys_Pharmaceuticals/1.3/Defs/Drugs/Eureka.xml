@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Eureka</defName>
+    <label>eureka</label>
+    <description>A synthetic stimulant drug of the shboombloom synthesis class. It is a moderately powerful study aid that boost learning and research speeds.</description>
+    <descriptionHyperlinks>
+      <HediffDef>EurekaHigh</HediffDef>
+	  <HediffDef>EurekaTolerance</HediffDef>
+      <HediffDef>EurekaAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Eureka</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.70</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>13</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>EurekaHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Eureka</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>EurekaTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>ShboombloomSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+	  <SLP_Amoxiclite>2</SLP_Amoxiclite>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Eureka</chemical>
+        <addictiveness>0.005</addictiveness>
+		<minToleranceToAddict>0.01</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>1</listOrder>
+        <overdoseSeverityOffset>0.04~0.09</overdoseSeverityOffset>
+        <largeOverdoseChance>0.0</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>EurekaHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>eureka!</label>
+    <labelNoun>a eureka high</labelNoun>
+    <description>Eureka in the bloodstream. It is quite an effective study aid.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<GlobalLearningFactor>0.30</GlobalLearningFactor>
+				<ResearchSpeed>0.30</ResearchSpeed>
+		  </statOffsets>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>EurekaHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>EurekaHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>eureka!</label>
+        <description>I feel focused and ready to learn.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <!-- Eureka addiction -->
+
+  <ChemicalDef>
+    <defName>Eureka</defName>
+    <label>eureka</label>
+    <addictionHediff>DaywakeAddiction</addictionHediff>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Eureka</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>eureka</label>
+    <description>Because of a eureka addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.333</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>EurekaAddiction</defName>
+    <label>eureka addiction</label>
+    <description>A chemical addiction to eureka. Long-term presence of eureka has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of eureka, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Eureka</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.075</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.2</restFallFactorOffset>
+		<statOffsets>
+				<GlobalLearningFactor>-0.30</GlobalLearningFactor>
+		</statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>120</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>EurekaWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>EurekaAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Eureka withdrawal</label>
+        <description>I can't focus and I've had enough of learning...</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>EurekaTolerance</defName>
+    <label>eureka tolerance</label>
+    <description>A built-up tolerance to eureka. The more severe this tolerance is, the more eureka it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.010</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Eureka</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  
+</Defs>

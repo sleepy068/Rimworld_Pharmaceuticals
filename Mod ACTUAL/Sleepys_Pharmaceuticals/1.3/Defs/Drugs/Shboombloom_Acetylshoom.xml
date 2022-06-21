@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Acetylshoom</defName>
     <label>acetylshoom</label>
-    <description>Extracted alkaloid from the nectar of the Shboombloom flower that has been further refined by acetylation. Acetylshoom is known for its ability for producing an extremely potent rush of pleasurable feelings, reducing the need for rest for a short time and even reducing pain somewhat.</description>
+    <description>Extracted alkaloid from the nectar of the Shboombloom flower that has been further refined by acetylation. Acetylshoom is known for its ability for producing an extremely potent rush of pleasurable feelings, reducing the need for rest for a short time and even reducing pain somewhat. While it is a powerful drug, the production chain results in a loss of value compared to other drugs that could be made from the materials required.</description>
     <descriptionHyperlinks>
       <HediffDef>AcetylshoomHigh</HediffDef>
 	  <HediffDef>ShboombloomTolerance</HediffDef>
@@ -53,7 +53,7 @@
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
-      <researchPrerequisite>ShboombloomSynthesis</researchPrerequisite>
+      <researchPrerequisite>AmoxicliteSynthesis</researchPrerequisite>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>

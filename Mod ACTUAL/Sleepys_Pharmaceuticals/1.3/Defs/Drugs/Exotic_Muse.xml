@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Muse</defName>
+    <label>muse</label>
+    <description>Muse, is an ultra tech medication used to boost crafting and building speed through a digestible nanite neural support network that boosts the creatively sectors of the brain.</description>
+    <descriptionHyperlinks>
+      <HediffDef>MuseHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Muse</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.70</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>800</WorkToMake>-->
+      <MarketValue>55</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>3</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MuseHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1011</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+      </li>
+    </comps>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>MuseHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>muse</label>
+    <labelNoun>a muse high</labelNoun>
+    <description>Muse in the bloodstream. The nanites help bridge the creatively sectors of the brain, improving the speed of such work.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<ConstructionSpeed>0.75</ConstructionSpeed>
+				<ConstructSuccessChance>0.50</ConstructSuccessChance>
+				<GeneralLaborSpeed>0.75</GeneralLaborSpeed>
+		  </statOffsets>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>MuseHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MuseHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>muse</label>
+        <description>It feels like I can think differently, the muse's have taken me.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

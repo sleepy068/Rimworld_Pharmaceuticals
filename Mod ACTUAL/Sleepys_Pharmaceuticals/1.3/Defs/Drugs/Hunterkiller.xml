@@ -105,7 +105,7 @@
 		  <statOffsets>
 				<GlobalLearningFactor>-0.75</GlobalLearningFactor>
 				<SocialImpact>-0.50</SocialImpact>
-				<HungerRateMultiplier>-0.60</HungerRateMultiplier>
+				<HungerRateMultiplier>-0.40</HungerRateMultiplier>
 				<MentalBreakThreshold>-0.20</MentalBreakThreshold>
 		  </statOffsets>
         </li>

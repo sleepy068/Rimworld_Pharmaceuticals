@@ -19,7 +19,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <WorkToMake>350</WorkToMake>
-      <MarketValue>49</MarketValue>
+      <MarketValue>35</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
     <techLevel>Industrial</techLevel>
@@ -93,7 +93,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-2.7</severityPerDay>
+        <severityPerDay>-2.0</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
