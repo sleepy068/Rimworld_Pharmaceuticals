@@ -7,7 +7,7 @@ Added 5 Exotic Drugs (Trade or Reward Only)
 Added sound effects for relavent new drugs
 
 Changes:
-Sorted the drugs in the Drugs tab (in better list order now)
+Sorted the drugs in the Drugs tab (in better sense/list order now)
 Adjusted Spira to last slightly longer
 Adjusted Daywake to last slight longer
 Adjusted Sodest Mental Break Reduction from 5% to 7.5%
@@ -17,7 +17,7 @@ Adjusted Fusidic Acid Balm required ingredient Neutroamine from 3 to 2
 Adjusted Fusidic Acid Balm healing factor from 30% to 35%
 Reduced Resinether value from 49 to 35
 Reduced Oxyether value from 7 to 6
-Adjusted Hunterkiller HungerRateMultiplier from x40% to 60%
+Adjusted Hunterkiller HungerRateMultiplier from x40% to 60% (this wasnt supposed to be x40%)
 
 Localisation:
 Fixed minor grammer mistake with Amoxi Medicine

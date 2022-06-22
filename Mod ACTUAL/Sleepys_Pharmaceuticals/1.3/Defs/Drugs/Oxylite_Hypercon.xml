@@ -47,7 +47,7 @@
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OxyliteTolerance</hediffDef>
-          <severity>0.10</severity>
+          <severity>0.05</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>
@@ -67,7 +67,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Oxylite</chemical>
         <addictiveness>0.0075</addictiveness>
-		<minToleranceToAddict>0.01</minToleranceToAddict>
+		<minToleranceToAddict>0.06</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>114</listOrder>

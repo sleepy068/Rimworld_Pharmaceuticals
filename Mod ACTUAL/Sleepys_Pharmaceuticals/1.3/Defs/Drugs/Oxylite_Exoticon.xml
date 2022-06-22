@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Exoticon</defName>
     <label>exoticon</label>
-    <description>Exoticon is effectively an even cruder concoction of precursor materials that have underwent further refinement. The base chemical that is synthesised by this mix is known as Oxylite. Exoticon was invented when building company employees on rimworlds couldn't quite get the effect they wanted from prolonged Hypercon use. It is just as effective as Hypercon but has a much stronger effect. While it is effective, it does take considerably longer to manufacture and the crude mixture of various chemicals means the drug interacts with others far more severely, greatly increasing the chances of overdose.</description>
+    <description>Exoticon is effectively an even cruder concoction of precursor materials that undergo further refinement. The base chemical that is synthesised by this mix is known as Oxylite. Exoticon was invented when building company employees on rimworlds couldn't quite get the effect they wanted from prolonged Hypercon use. It is just as effective as Hypercon but has a much stronger effect. While it is effective, it does take considerably longer to manufacture and the crude mixture of various chemicals means the drug interacts with others far more severely, greatly increasing the chances of overdose.</description>
     <descriptionHyperlinks>
       <HediffDef>ExoticonHigh</HediffDef>
 	  <HediffDef>OxyliteTolerance</HediffDef>
@@ -47,7 +47,7 @@
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OxyliteTolerance</hediffDef>
-          <severity>0.05</severity>
+          <severity>0.10</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>

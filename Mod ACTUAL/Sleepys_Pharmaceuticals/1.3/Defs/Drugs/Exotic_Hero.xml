@@ -59,7 +59,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.166</severityPerDay>
+        <severityPerDay>-0.333</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
@@ -69,8 +69,8 @@
 				<ShootingAccuracyPawn>8.00</ShootingAccuracyPawn>
 				<MeleeHitChance>8.00</MeleeHitChance>
 				<MeleeDodgeChance>10.00</MeleeDodgeChance>
-				<AimingDelayFactor>0.90</AimingDelayFactor>
-				<PainShockThreshold>0.90</PainShockThreshold>
+				<AimingDelayFactor>-0.10</AimingDelayFactor>
+				<PainShockThreshold>0.15</PainShockThreshold>
 		  </statOffsets>
           <capMods>
             <li>

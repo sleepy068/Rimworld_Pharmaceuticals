@@ -23,7 +23,7 @@
     <ingestible>
       <foodType>Processed</foodType>
       <drugCategory>Medical</drugCategory>
-      <baseIngestTicks>100</baseIngestTicks>
+      <baseIngestTicks>50</baseIngestTicks>
       <ingestSound>SLP_Ingest_Puffer</ingestSound>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
