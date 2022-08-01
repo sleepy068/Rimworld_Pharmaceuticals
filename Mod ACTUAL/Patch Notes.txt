@@ -1,26 +1,14 @@
-Update v1.3.0
+Update v1.4.0
 
 Additions:
-Added 4 Medical Drugs
-Added 5 Hard Drugs
-Added 5 Exotic Drugs (Trade or Reward Only)
-Added sound effects for relavent new drugs
+
 
 Changes:
-Sorted the drugs in the Drugs tab (in better sense/list order now)
-Adjusted Spira to last slightly longer
-Adjusted Daywake to last slight longer
-Adjusted Sodest Mental Break Reduction from 5% to 7.5%
-Adjusted Ashifer Mood Boost from 5 to 7
-Adjusted Resineither High Duration from 0.3 to 0.5
-Adjusted Fusidic Acid Balm required ingredient Neutroamine from 3 to 2
-Adjusted Fusidic Acid Balm healing factor from 30% to 35%
-Reduced Resinether value from 49 to 35
-Reduced Oxyether value from 7 to 6
-Adjusted Hunterkiller HungerRateMultiplier from x40% to 60% (this wasnt supposed to be x40%)
+Adjusted Perfume Duration (2.0 Days to 1.0 Days)(makes it more worthwhile using)
+Adjusted Cleansing Wipe Duration (2.0 to 1.6 Days)
+Reduced Perfume Mood Boost (5 to 4)(To balance the new duration)
 
 Localisation:
-Fixed minor grammer mistake with Amoxi Medicine
+
 
 Bug Fixes:
-Epi didnt have a food type and was getting the default, fixed.

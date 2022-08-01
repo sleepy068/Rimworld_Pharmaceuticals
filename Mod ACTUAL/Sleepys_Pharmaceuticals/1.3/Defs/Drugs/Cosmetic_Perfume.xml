@@ -54,8 +54,8 @@
   <HediffDef>
     <defName>PerfumeHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>fragrance scent</label>
-    <labelNoun>fragrance scent</labelNoun>
+    <label>fragrant scent</label>
+    <labelNoun>fragrant scent</labelNoun>
     <description>Fresh and beautiful scent.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -63,7 +63,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-2.0</severityPerDay>
+        <severityPerDay>-1.0</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
@@ -85,7 +85,7 @@
       <li>
         <label>Brilliant Scent!</label>
         <description>This perfume makes me feel sophisticated and smell amazing at the same time.</description>
-        <baseMoodEffect>5</baseMoodEffect>
+        <baseMoodEffect>4</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
