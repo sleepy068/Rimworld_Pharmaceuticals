@@ -4,9 +4,16 @@ Additions:
 
 
 Changes:
-Adjusted Perfume Duration (2.0 Days to 1.0 Days)(makes it more worthwhile using)
-Adjusted Cleansing Wipe Duration (2.0 to 1.6 Days)
-Reduced Perfume Mood Boost (5 to 4)(To balance the new duration)
+Adjusted Perfume Duration from 0.5 Days to 1.0 Days (makes it more worthwhile using)
+Adjusted Cleansing Wipe Duration from 0.5 to 0.8 Days
+Adjusted Eureka Duration from 0.4 Days to 0.5 Days (per does of 75%)
+Adjusted Penicillin Immunity Gain Speed from 10% to 15%
+Adjusted Hypercillin Immunity Gain Speed from 20% to 30%
+Adjusted Penicillin Balm healing factor from 15% to 25%
+Adjusted Aloe Vera Balm healing factor from 15% to 25%
+Adjusted Fusidic Balm healing factor from 35% to 60%
+
+Reduced Perfume Mood Boost from 5 to 4 (to balance the new duration length)
 
 Localisation:
 

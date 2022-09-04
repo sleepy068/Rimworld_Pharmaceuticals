@@ -70,7 +70,7 @@
       <stages>
         <li>
 			<statOffsets>
-				<InjuryHealingFactor>0.15</InjuryHealingFactor>
+				<InjuryHealingFactor>0.25</InjuryHealingFactor>
 		  </statOffsets>
         </li>
       </stages>
