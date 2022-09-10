@@ -121,7 +121,7 @@
     <description>A chemical addiction to pep. Short-term presence of pep has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
 \nWithout regular doses of pep, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
-    <causesNeed>Chemical_Daywake</causesNeed>
+    <causesNeed>Chemical_Pep</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.250</severityPerDay>
