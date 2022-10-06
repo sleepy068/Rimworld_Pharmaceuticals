@@ -1,13 +1,14 @@
-Update v1.4.1
+Update v1.4.2
 
 Additions:
-
+N/A
 
 Changes:
-
+1.4 Compatiablity (Unstable Branch)
+Biotech Compatiablity (Detected from XML Changes, additional changes may occur on release)
 
 Localisation:
-
+N/A
 
 Bug Fixes:
-Fixed Pep addiction requiring Daywake, not Pep
+N/A

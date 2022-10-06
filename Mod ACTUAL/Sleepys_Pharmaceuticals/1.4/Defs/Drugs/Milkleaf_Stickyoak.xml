@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Stickyoak</defName>
+    <label>stickyoak</label>
+    <description>An crudely processed and refined extracted alkaloid from the milkleaf plant. Stickyoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The low quality and less than ideal manufacturing environments mean stickyoak is generally hazardous to one's health with overdosing been more common than the other high grade resin drugs. Named for its crude blackened appearance when compared to the higher grade resin products. While of low quality, it is still extremely addictive and addicts will often go to any length to get more of the drug. \n\nUsually manufactured within criminal organisations in many mid-worlds as an illegal recreational drug that has the potential to destroy the lives of its users.</description>
+    <descriptionHyperlinks>
+      <HediffDef>StickyoakHigh</HediffDef>
+	  <HediffDef>MilkleafTolerance</HediffDef>
+      <HediffDef>MilkleafAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Stickyoak</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.83</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>37</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <joyKind>Chemical</joyKind>
+      <joy>0.70</joy>
+      <drugCategory>Hard</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>StickyoakHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Milkleaf</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MilkleafTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.1</offset>
+          <toleranceChemical>Milkleaf</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>MilkleafRefining</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <SLP_MilkleafPod>8</SLP_MilkleafPod>
+	  <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Milkleaf</chemical>
+        <addictiveness>0.05</addictiveness>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>340</listOrder>
+        <overdoseSeverityOffset>0.12~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.012</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>StickyoakHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on stickyoak</label>
+    <labelNoun>a stickyoak high</labelNoun>
+    <description>Stickyoak in the bloodstream. It is very effective at blocking pain signals from the brain while also producing a significantly pleasurable feeling.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.35</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.2</painFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>-0.10</offset>
+            </li>
+			<li>
+              <capacity>Breathing</capacity>
+              <offset>-0.15</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>StickyoakHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>StickyoakHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on stickyoak</label>
+        <description>I feel heavy, tired but also amazing at the same time. I can't really feel any pain at all. I really like this.</description>
+        <baseMoodEffect>30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

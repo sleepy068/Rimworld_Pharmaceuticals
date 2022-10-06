@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Sodest</defName>
+    <label>sodest</label>
+    <description>An antidepressant of the selective serotonin reuptake inhibitor (SSRI) class. Sodest is generally used to treat depression or panic attack disorders. It helps the user handle higher stress environments better by altering the user's brain chemistry by slowing re-absorption of the neurotransmitter serotonin.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SodestCalm</HediffDef>
+	  <HediffDef>SSRITolerance</HediffDef>
+      <HediffDef>SSRIAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Sodest</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>11</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SodestCalm</hediffDef>
+          <severity>1.0</severity>
+          <toleranceChemical>SSRI</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SSRITolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>SupportDrugSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>SSRI</chemical>
+        <addictiveness>0.03</addictiveness>
+		<minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>490</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SodestCalm</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>calmed by sodest</label>
+    <labelNoun>a sodest calm</labelNoun>
+    <description>Sodest in the bloodstream. It helps balance the user's mood.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<MentalBreakThreshold>-0.075</MentalBreakThreshold>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SodestCalm</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SodestCalm</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>calmed by sodest</label>
+        <description>I feel like I can handle stress better.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!-- SSRI addiction -->
+
+  <ChemicalDef>
+    <defName>SSRI</defName>
+    <label>SSRI</label>
+    <addictionHediff>SSRIAddiction</addictionHediff>
+	<toleranceHediff>SSRITolerance</toleranceHediff>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_SSRI</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>SSRI</label>
+    <description>Because of a SSRI addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.333</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>SSRIAddiction</defName>
+    <label>SSRI addiction</label>
+    <description>A chemical addiction to SSRI class drugs. Long-term presence of SSRIs has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of a SSRI, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_SSRI</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.045</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+	  <li>
+		<statOffsets>
+			<RestRateMultiplier>-0.15</RestRateMultiplier>
+			<MentalBreakThreshold>0.10</MentalBreakThreshold>
+		</statOffsets>
+      </li>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+		<socialFightChanceFactor>1.20</socialFightChanceFactor>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SSRIWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SSRIAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>SSRI withdrawal</label>
+        <description>My heart feels heavy. I can't really deal with my problems very well.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>SSRITolerance</defName>
+    <label>SSRI tolerance</label>
+    <description>A built-up tolerance to SSRIs. The more severe this tolerance is, the more of a SSRI it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.02</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>SSRI</chemical>
+      </li>
+    </comps>
+
+  </HediffDef>
+
+
+</Defs>

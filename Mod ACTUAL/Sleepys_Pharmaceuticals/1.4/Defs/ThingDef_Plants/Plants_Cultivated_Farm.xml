@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=========================== Drug crops ==============================-->
+  <!--==== Milkleaf ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_Milkleaf</defName>
+    <label>milkleaf</label>
+    <description>A beautiful looking flowering plant that later forms a pod. This pod can be harvested for alkaloids and later processed into useful albeit dangerous drugs.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+	  <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Mature_Milkleaf</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Milkleaf</immatureGraphicPath>
+	  <fertilityMin>0.5</fertilityMin>
+	  <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>12</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_MilkleafPod</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>6</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+
+  <!--==== Rimshroom ====-->
+  <ThingDef ParentName="CavePlantBase">
+    <defName>SLP_Rimshroom</defName>
+    <label>rimshroom</label>
+    <description>A fungus that naturally produces Psilocybin, a psychedelic prodrug compound. It can grow on fungal gravel, but only in darkness - exposing it to any kind of light, including darklights, will kill it.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Rimshroom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.3</fertilityMin>
+      <fertilitySensitivity>0.15</fertilitySensitivity>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_RawRimshroom</harvestedThingDef>
+      <harvestYield>1</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0</topWindExposure>
+      <growDays>8</growDays>
+      <cavePlantWeight>0</cavePlantWeight>
+      <visualSizeRange>0.3~0.65</visualSizeRange>
+      <maxMeshCount>9</maxMeshCount>
+    </plant>
+  </ThingDef>
+  
+  <!--==== Penicillium ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_Penicillium</defName>
+    <label>penicillium</label>
+    <description>Effectively just common mould, penicillium is a genus of ascomycetous fungi that is part of the mycobiome of many species and is of major importance in the natural environment, in food spoilage, and in food and drug production. \n\nWhile penicillium grows everywhere, this genetically modified version must be grown in Hydroponics to be farmed properly.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+	  <Beauty>-1</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Mature_Penicillium</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Penicillium</immatureGraphicPath>
+	  <fertilityMin>0.1</fertilityMin>
+	  <fertilitySensitivity>0.1</fertilitySensitivity>
+      <growDays>8</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_Penicillium</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>1</sowMinSkill>
+      <sowTags>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.5</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
+  <!--==== Aloe Vera ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_AloeVera</defName>
+    <label>aloe vera</label>
+    <description>Aloe is a cactus-like plant that grows in hot, dry climates.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.1</Nutrition>
+	  <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_AloeVera</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+	  <fertilityMin>0.3</fertilityMin>
+	  <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>9</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_AloeVera</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
+  <!--==== Shboombloom ====-->
+  <ThingDef ParentName="PlantBase">
+    <defName>SLP_Plant_Shboombloom</defName>
+    <label>shboombloom</label>
+    <description>A genetically engineered plant. Artificially made to try and make a hardier drug producing plant that could compete with other hard drugs and neutroamine manufacturing plants on mid-worlds. The flowers can be harvested for various alkaloids and chemicals and later processed into drugs or drug producing compounds.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+	  <Beauty>4</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/SLP_Plant_Mature_Shboombloom</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/SLP_Plant_Immature_Shboombloom</immatureGraphicPath>
+	  <fertilityMin>0.7</fertilityMin>
+	  <fertilitySensitivity>1.0</fertilitySensitivity>
+      <growDays>8</growDays>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>SLP_ShboombloomNectar</harvestedThingDef>
+      <harvestYield>6</harvestYield>
+      <sowMinSkill>1</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>0.3~1.05</visualSizeRange>
+      <wildOrder>2</wildOrder>
+    </plant>
+  </ThingDef>
+  
+</Defs>

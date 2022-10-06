@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Epinephrine</defName>
+    <label>Epinephrine</label>
+    <description>Epinephrine, also known as Adrenaline, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration). When utilised as a medicine it can provide a very powerful surge reaction of the user. This surge greatly enhances movement speed and consciousness but its effects are quickly diminished. Epinephrine is by some paramilitary organisations on mid-worlds as a means to get severely injured or unconscious soldiers moving and out of harms way.</description>
+    <descriptionHyperlinks>
+      <HediffDef>EpinephrineHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Epinephrine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.83</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1400</WorkToMake>
+      <MarketValue>39</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed, Fluid</foodType>
+	  <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>EpinephrineHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>EMFirstAid</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>450</listOrder>
+        <overdoseSeverityOffset>0.09~0.25</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>EpinephrineHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>Epinephrine</label>
+    <labelNoun>Epinephrine</labelNoun>
+    <description>Epinephrine in the bloodstream. It surges the body into action.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-10.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+			<painFactor>0.2</painFactor>
+			<capMods>
+            <li>
+              <capacity>Consciousness</capacity> 
+              <offset>0.50</offset>
+            </li>
+			<li>
+              <capacity>Moving</capacity> 
+              <offset>0.50</offset>
+            </li>
+          </capMods>
+		</li>
+      </stages>
+  </HediffDef>
+  
+</Defs>
