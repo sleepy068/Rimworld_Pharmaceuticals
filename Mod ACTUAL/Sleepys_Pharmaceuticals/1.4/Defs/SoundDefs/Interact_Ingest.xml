@@ -11,7 +11,7 @@
         <muteWhenPaused>True</muteWhenPaused>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>SLP_Puffer03</clipFolderPath>
+            <clipFolderPath>SLP_Puffer</clipFolderPath>
           </li>
         </grains>
         <volumeRange>17~17</volumeRange>

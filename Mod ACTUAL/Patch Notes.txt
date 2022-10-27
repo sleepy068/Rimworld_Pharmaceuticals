@@ -1,14 +1,13 @@
-Update v1.4.2
+Update v1.4.3
 
 Additions:
 N/A
 
 Changes:
-1.4 Compatiablity (Unstable Branch)
-Biotech Compatiablity (Detected from XML Changes, additional changes may occur on release)
+N/A
 
 Localisation:
 N/A
 
 Bug Fixes:
-N/A
+Fixed log spam with audio from Sudeseen
