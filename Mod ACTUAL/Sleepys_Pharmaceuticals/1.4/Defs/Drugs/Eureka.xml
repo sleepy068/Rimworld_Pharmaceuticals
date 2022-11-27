@@ -115,6 +115,8 @@
     <defName>Eureka</defName>
     <label>eureka</label>
     <addictionHediff>EurekaAddiction</addictionHediff>
+	<toleranceHediff>EurekaTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

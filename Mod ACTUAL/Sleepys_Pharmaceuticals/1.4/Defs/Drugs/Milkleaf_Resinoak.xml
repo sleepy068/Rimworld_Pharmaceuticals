@@ -134,6 +134,8 @@
     <defName>Milkleaf</defName>
     <label>milkleaf</label>
     <addictionHediff>MilkleafAddiction</addictionHediff>
+	<toleranceHediff>MilkleafTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

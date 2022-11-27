@@ -110,6 +110,8 @@
     <defName>Dreamer</defName>
     <label>dreamer</label>
     <addictionHediff>DreamerAddiction</addictionHediff>
+	<toleranceHediff>DreamerTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

@@ -105,6 +105,8 @@
     <defName>Pep</defName>
     <label>pep</label>
     <addictionHediff>PepAddiction</addictionHediff>
+	<toleranceHediff>PepTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

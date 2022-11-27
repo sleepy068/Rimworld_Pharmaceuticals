@@ -129,6 +129,8 @@
     <defName>Shboombloom</defName>
     <label>shboombloom</label>
     <addictionHediff>ShboombloomAddiction</addictionHediff>
+	<toleranceHediff>ShboombloomTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

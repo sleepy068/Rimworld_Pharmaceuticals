@@ -127,6 +127,8 @@
     <defName>Oxylite</defName>
     <label>oxylite</label>
     <addictionHediff>OxyliteAddiction</addictionHediff>
+	<toleranceHediff>OxyliteTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

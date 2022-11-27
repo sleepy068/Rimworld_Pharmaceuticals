@@ -134,6 +134,8 @@
     <defName>Hunterkiller</defName>
     <label>hunterkiller</label>
     <addictionHediff>HunterkillerAddiction</addictionHediff>
+	<toleranceHediff>HunterkillerTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

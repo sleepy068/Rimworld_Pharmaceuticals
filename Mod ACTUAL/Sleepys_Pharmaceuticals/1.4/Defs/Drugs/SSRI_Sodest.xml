@@ -109,6 +109,7 @@
     <label>SSRI</label>
     <addictionHediff>SSRIAddiction</addictionHediff>
 	<toleranceHediff>SSRITolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

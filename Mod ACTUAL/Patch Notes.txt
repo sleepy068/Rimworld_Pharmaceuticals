@@ -1,4 +1,4 @@
-Update v1.4.3
+Update v1.4.4
 
 Additions:
 N/A
@@ -10,4 +10,4 @@ Localisation:
 N/A
 
 Bug Fixes:
-Fixed log spam with audio from Sudeseen
+Fixed issue with auto generated addiction genes

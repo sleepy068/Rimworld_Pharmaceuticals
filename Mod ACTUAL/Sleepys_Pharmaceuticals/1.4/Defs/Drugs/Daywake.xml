@@ -111,6 +111,8 @@
     <defName>Daywake</defName>
     <label>daywake</label>
     <addictionHediff>DaywakeAddiction</addictionHediff>
+	<toleranceHediff>DaywakeTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">

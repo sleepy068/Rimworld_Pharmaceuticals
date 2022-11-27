@@ -137,6 +137,8 @@
     <defName>Amphetamine</defName>
     <label>amphetamine</label>
     <addictionHediff>AmphetamineAddiction</addictionHediff>
+	<toleranceHediff>AmphetamineTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
   </ChemicalDef>
   
   <NeedDef ParentName="DrugAddictionNeedBase">
