@@ -92,7 +92,7 @@
     <stages>
       <li>
         <label>hero</label>
-        <description>Would you look at me, I'm setting records!</description>
+        <description>Would you look at me? I'm setting records!</description>
         <baseMoodEffect>0</baseMoodEffect>
       </li>
     </stages>
