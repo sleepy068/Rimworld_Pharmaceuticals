@@ -17,7 +17,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <!--<WorkToMake>800</WorkToMake>-->
-      <MarketValue>55</MarketValue>
+      <MarketValue>49</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Ultra</techLevel>
@@ -30,7 +30,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>MuseHigh</hediffDef>
-          <severity>1.00</severity>
+          <severity>0.50</severity>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -59,7 +59,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.5</severityPerDay>
+        <severityPerDay>-0.166</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
