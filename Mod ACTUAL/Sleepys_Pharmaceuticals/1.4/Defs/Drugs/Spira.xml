@@ -37,7 +37,7 @@
       <li Class="CompProperties_Drug">
         <listOrder>470</listOrder>
         <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
-        <largeOverdoseChance>0.001</largeOverdoseChance>
+        <largeOverdoseChance>0.00075</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>
@@ -54,7 +54,7 @@
     <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.5</severityPerDay>
+        <severityPerDay>-1.4</severityPerDay>
         <showHoursToRecover>true</showHoursToRecover>
       </li>
     </comps>
@@ -75,7 +75,7 @@
 	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
       <li>
-        <label>high on spira</label>
+        <label>relief from spira</label>
         <description>I can still feel the pain but I can handle it better.</description>
         <baseMoodEffect>0</baseMoodEffect>
       </li>

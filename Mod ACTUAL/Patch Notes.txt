@@ -1,15 +1,13 @@
-Update v1.4.5 15/03/23
+Update v1.4.6 24/04/23
 
 Additions:
 N/A
 
 Changes:
-Increased Muse's duration from 2.0 days to 3.0 days for a single dose (need to buff it as an exotic drug, at the moment it doesnt help that much)
-Reduced Muses intial hediff severity from 1.0 to 0.50 (meaning it can be stacked 2 times now for longer effects)
-Reduced Muse's market value from 55 to 49
+N/A
 
 Localisation:
-N/A
+Corrected the Balms still been called Onitment in the Hediff description
 
 Bug Fixes:
 N/A

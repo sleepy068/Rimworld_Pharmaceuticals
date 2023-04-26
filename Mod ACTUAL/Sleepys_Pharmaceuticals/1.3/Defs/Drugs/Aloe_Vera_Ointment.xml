@@ -54,9 +54,9 @@
   <HediffDef>
     <defName>AloeVeraHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>aloe vera ointment</label>
-    <labelNoun>aloe vera ointment</labelNoun>
-    <description>Aloe vera ointment on the skin. It helps the body heal faster.</description>
+    <label>aloe vera balm</label>
+    <labelNoun>aloe vera balm</labelNoun>
+    <description>Aloe vera balm on the skin. It helps the body heal faster.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>

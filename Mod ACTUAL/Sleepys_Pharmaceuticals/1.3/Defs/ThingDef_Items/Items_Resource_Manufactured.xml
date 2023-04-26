@@ -38,7 +38,7 @@
     </recipeUsers>
     <soundWorking>Recipe_Brewing</soundWorking>
     <allowMixingIngredients>true</allowMixingIngredients>
-    <workAmount>750</workAmount>
+    <workAmount>900</workAmount>
     <targetCountAdjustment>1</targetCountAdjustment>
     <ingredients>
       <li>

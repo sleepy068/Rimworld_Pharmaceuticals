@@ -54,9 +54,9 @@
   <HediffDef>
     <defName>FusidicAcidHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>fusidic acid ointment</label>
-    <labelNoun>fusidic acid ointment</labelNoun>
-    <description>Fusidic Acid ointment on the skin. It helps the body heal faster.</description>
+    <label>fusidic acid balm</label>
+    <labelNoun>fusidic acid balm</labelNoun>
+    <description>Fusidic Acid balm on the skin. It helps the body heal faster.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
