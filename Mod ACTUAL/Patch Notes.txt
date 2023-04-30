@@ -4,7 +4,10 @@ Additions:
 N/A
 
 Changes:
-N/A
+Adjusted Spira to have a further ~16% longer duration. (it just wasn't powerful enough to be worth it over Axecline, it should now last 1/3 longer compared to Axecline)
+Adjusted Spiras market value from 3 to 4 (same as Axecline, the difference will be their effects, not their cost)
+Adjusted Axecline pain reduction from 75% to 72% (slight buff to keep it competitive against Spira)
+
 
 Localisation:
 Corrected the Balms still been called Onitment in the Hediff description

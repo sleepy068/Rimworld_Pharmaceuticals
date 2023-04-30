@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 
   <ThingDef ParentName="DrugBase">
@@ -60,7 +61,7 @@
     </comps>
       <stages>
         <li>
-          <painFactor>0.75</painFactor>
+          <painFactor>0.72</painFactor>
           <capMods>
           </capMods>
         </li>
