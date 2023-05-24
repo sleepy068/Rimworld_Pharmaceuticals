@@ -11,10 +11,11 @@
 
     <description>
 [img]https://i.imgur.com/Fmo0K99.png[/img]
-[h2]Sleepy's Pharmaceuticals (v1.4.0)[/h2]
+
+[h2]Sleepy's Pharmaceuticals (v1.4.5)[/h2]
 I absolutely love the drug mechanics in this game, they are highly risky but can turn the tide if used correctly. I am trying to replicate the feel vanilla drugs have (i play with very few mods and want to keep the balance). They will have niche uses and can help in tough situations but ultimately they will be risky to use.
 
-Feedback and suggestions are appreciated! Especially if anything feels overpowered.
+I love to add content to this game that I feel is missing or that I'd like expanded. I figure that if I enjoy what I've added, others may too so I to post my mods to the workshop. Balance is critical to me as I am a vanilla player and I'll try to ensure nothing is unbalanced but ultimately I have a goal in mind for the content I am adding so what I consider balanced may not always be what you'd consider balanced. Hopefully you enjoy the mod none the less.
 
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
@@ -41,7 +42,7 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/1ajjjqI.png[/img]
 [img]https://i.imgur.com/iEFoVVG.png[/img]
 [img]https://i.imgur.com/0RYEBM1.png[/img]
-[img]https://i.imgur.com/w27VIXC.png[/img]
+[img]https://i.imgur.com/I3dbMZz.png[/img]
 [img]https://i.imgur.com/Af4Yf6P.png[/img]
 [img]https://i.imgur.com/nnfkDCu.png[/img]
 [img]https://i.imgur.com/81QMfex.png[/img]
@@ -89,7 +90,6 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/ss8ZNXk.png[/img]
 [b]Roadmap:[/b]
 - This mod is consider feature complete and will not likely have more content added (I feel like my mod has done what I set out to do and added various new niche drugs and drug profit options, further content would likely just be repetition or add little value to the game).
-- Add mod options (so you can cherry pick the mod).
 - Balancing where needed.
 
 [img]https://i.imgur.com/YySbEPN.png[/img]
@@ -115,9 +115,11 @@ No known issues.
 [b]Language Support[/b]
 English (Always Current)(Developed in this Language)
 
-Latest Version:
+Github:
 https://github.com/sleepy068/Rimworld_Pharmaceuticals
-    </description>
+
+Please post any issue reports to my Github. I appreciate any feedback but please keep in mind I have a goal in mind for the content I am adding so what I consider balanced may not always be what you'd consider balanced.
+</description>
 
     <modDependencies>
     </modDependencies>
