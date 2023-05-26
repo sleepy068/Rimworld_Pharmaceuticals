@@ -37,7 +37,7 @@
       <li Class="CompProperties_Drug">
         <listOrder>470</listOrder>
         <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
-        <largeOverdoseChance>0.00075</largeOverdoseChance>
+        <largeOverdoseChance>0.0075</largeOverdoseChance>
       </li>
     </comps>
   </ThingDef>

@@ -53,7 +53,7 @@
     <comps>
       <li Class="CompProperties_Drug">
         <listOrder>1000</listOrder>
-        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+        <overdoseSeverityOffset>0</overdoseSeverityOffset>
       </li>
     </comps>
   </ThingDef>

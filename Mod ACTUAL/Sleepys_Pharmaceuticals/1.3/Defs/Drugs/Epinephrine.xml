@@ -78,6 +78,7 @@
       <stages>
         <li>
 			<painFactor>0.2</painFactor>
+			<restFallFactor>0.1</restFallFactor>
 			<capMods>
             <li>
               <capacity>Consciousness</capacity> 

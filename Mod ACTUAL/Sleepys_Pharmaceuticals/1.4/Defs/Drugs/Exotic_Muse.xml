@@ -4,7 +4,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>SLP_Muse</defName>
     <label>muse</label>
-    <description>Muse, is an ultra tech medication used to boost crafting and building speed through a digestible nanite neural support network that boosts the creatively sectors of the brain.</description>
+    <description>Muse, is an ultra tech medication used to boost crafting and building speed and perseverance through a digestible nanite neural support network that boosts the creatively sectors of the brain.</description>
     <descriptionHyperlinks>
       <HediffDef>MuseHigh</HediffDef>
     </descriptionHyperlinks>
@@ -17,7 +17,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <!--<WorkToMake>800</WorkToMake>-->
-      <MarketValue>49</MarketValue>
+      <MarketValue>79</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Ultra</techLevel>
@@ -31,6 +31,10 @@
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>MuseHigh</hediffDef>
           <severity>0.50</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.8</offset>
         </li>
       </outcomeDoers>
     </ingestible>
@@ -65,6 +69,7 @@
     </comps>
       <stages>
         <li>
+		  <restFallFactor>0.50</restFallFactor>
 		  <statOffsets>
 				<ConstructionSpeed>0.75</ConstructionSpeed>
 				<ConstructSuccessChance>0.50</ConstructSuccessChance>
@@ -85,7 +90,7 @@
     <stages>
       <li>
         <label>muse</label>
-        <description>It feels like I can think differently, the muse's have taken me.</description>
+        <description>It feels like I can think differently, and I feel awoken, the muse's have taken me.</description>
         <baseMoodEffect>0</baseMoodEffect>
       </li>
     </stages>

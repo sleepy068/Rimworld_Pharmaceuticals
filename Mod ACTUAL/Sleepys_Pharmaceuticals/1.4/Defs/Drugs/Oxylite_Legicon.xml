@@ -47,7 +47,7 @@
         </li>
 		<li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>OxyliteTolerance</hediffDef>
-          <severity>0.15</severity>
+          <severity>0.015</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
       </outcomeDoers>

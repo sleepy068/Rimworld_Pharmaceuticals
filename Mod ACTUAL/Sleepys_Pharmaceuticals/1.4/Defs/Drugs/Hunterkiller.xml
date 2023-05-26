@@ -73,7 +73,7 @@
     <comps>
       <li Class="CompProperties_Drug">
         <chemical>Hunterkiller</chemical>
-        <addictiveness>0.1</addictiveness>
+        <addictiveness>0.08</addictiveness>
         <existingAddictionSeverityOffset>0.25</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>205</listOrder>

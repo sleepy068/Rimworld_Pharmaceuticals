@@ -1,13 +1,24 @@
-Update v1.4.7 Build 24/05/23 | Post
+Update v1.4.7 Build 24/05/23 | Post 27/05/23
 
 Additions:
 N/A
 
 Changes:
-N/A
+Adjusted Flu Counteragent Overdose Severity Offset to 0.00 (wasn't meant to ever add to a OD, like other safe medical drugs)
+Adjusted Raw Rimshroom Duration from 0.2 Days to 0.33 Days
+Adjusted Rimshroom Tea Duration from 0.2 Days to 0.25 Days
+Adjusted Hypercon tolerance gain per dose from 5% to 10% (This makes using the harder variants more attractive)
+Adjusted Exoticon tolerance gain per dose from 10% to 5%
+Adjusted Legicon tolerance gain per dose from 15% to 1.5%
+Adjusted Epinephrine to have a Rest Fall Factor of 10% (meaning a pawn will have their rest drain reduced to 10% of what it is normally)
+Adjusted Muse to now give +80% Rest
+Adjusted Muse to now give a Rest Fall Factor of 50%
+Adjusted Muse value from 49 to 79 (The new rest factors no longer makes it under powered, it actually feels decent now)
+Adjusted Hunterkiller Addiction Change from 10% to 8%
+Adjusted Sodest Addiction Chance from 3% to 2.2% (Same as Ashifer)
 
 Localisation:
-N/A
+Changes to Muse description and ThoughtDef to reflect the new adjustments
 
 Bug Fixes:
-N/A
+Fixed Spira Overdose typo resulting in a chance of 0.075% instead of 0.75%.
