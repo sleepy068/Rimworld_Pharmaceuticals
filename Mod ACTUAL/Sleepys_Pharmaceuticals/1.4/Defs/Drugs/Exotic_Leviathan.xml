@@ -17,7 +17,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <!--<WorkToMake>800</WorkToMake>-->
-      <MarketValue>106</MarketValue>
+      <MarketValue>95</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Ultra</techLevel>
@@ -34,7 +34,7 @@
         </li>
 		<li Class="IngestionOutcomeDoer_OffsetNeed">
           <need>Rest</need>
-          <offset>0.3</offset>
+          <offset>0.4</offset>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetPsyfocus">
           <offset>0.50</offset>

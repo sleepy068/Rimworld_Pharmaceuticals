@@ -17,7 +17,7 @@
     <rotatable>false</rotatable>
     <statBases>
       <!--<WorkToMake>800</WorkToMake>-->
-      <MarketValue>90</MarketValue>
+      <MarketValue>88</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Ultra</techLevel>

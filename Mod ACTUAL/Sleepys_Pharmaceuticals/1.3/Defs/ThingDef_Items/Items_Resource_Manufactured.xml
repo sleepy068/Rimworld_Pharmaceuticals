@@ -87,7 +87,7 @@
     <defName>Make_SLPAmoxiclite</defName>
     <label>make amoxiclite</label>
     <description>Make amoxiclite from shboombloom nectar.</description>
-    <jobString>Making salicylic acid.</jobString>
+    <jobString>Making amoxiclite.</jobString>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
     <workSkill>Cooking</workSkill>
     <effectWorking>Cook</effectWorking>
