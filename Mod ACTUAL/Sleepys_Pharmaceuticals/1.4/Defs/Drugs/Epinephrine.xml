@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Epinephrine</defName>
     <label>Epinephrine</label>
-    <description>Epinephrine, also known as Adrenaline, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration). When utilised as a medicine it can provide a very powerful surge reaction of the user. This surge greatly enhances movement speed and consciousness but its effects are quickly diminished. Epinephrine is by some paramilitary organisations on mid-worlds as a means to get severely injured or unconscious soldiers moving and out of harms way.</description>
+    <description>Epinephrine, also known as Adrenaline, is a hormone and medication which is involved in regulating visceral functions (e.g., respiration). When utilised as a medicine it can provide a very powerful surge reaction of the user. This surge greatly enhances movement speed and consciousness but its effects are quickly diminished. Epinephrine is used by some paramilitary organisations on mid-worlds as a means to get severely injured or unconscious soldiers moving and out of harms way.</description>
     <descriptionHyperlinks>
       <HediffDef>EpinephrineHigh</HediffDef>
     </descriptionHyperlinks>

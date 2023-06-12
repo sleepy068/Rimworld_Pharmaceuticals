@@ -7,7 +7,7 @@ Changes:
 N/A
 
 Localisation:
-N/A
+Fixed sentence structure with Epinephrine's description
 
 Bug Fixes:
 N/A
