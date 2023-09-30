@@ -1,0 +1,11 @@
+Needs Tech Disk to Make:
+Psyastasis - Reduces psychic sensitivity to zero (Added only when Royalty is detected)(2.0 Days).
+Slumber - Rest Rate Multipler +40% (1.0 Days)
+Aloeasix - Pain x40% (0.75 Days)
+Neverhex - +12 Mood, 0.50 Joy (1.0 Days)
+Thermax - +24 Max Comfortable Temp, -24 Min Comfortable Temp (3.0 Days)
+Pillwire - +24 Mood, 0.75 Joy, -20% Consciousness
+
+Can't be made:
+Vexatrol - Remove Addition (Not Luci) but creates addiction for Vexatrol with mild withdrawal.
+Polisho - +1 Crafted Item Quality Level

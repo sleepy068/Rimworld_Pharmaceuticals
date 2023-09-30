@@ -56,7 +56,7 @@
     <hediffClass>Hediff_High</hediffClass>
     <label>penicillin balm</label>
     <labelNoun>penicillin balm</labelNoun>
-    <description>Penicillin balm on the skin. It the body heal faster.</description>
+    <description>Penicillin balm on the skin. It helps the body heal faster.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
