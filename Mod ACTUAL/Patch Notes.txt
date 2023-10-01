@@ -1,14 +1,13 @@
-Update v1.4.9 Build 02/06/23 |
+Update v1.4.10 Build 02/10/23 | Post 
 
 Additions:
-Increased Axecline Overdose chance from 0.1% to 0.4%
+N/A
 
 Changes:
 N/A
 
 Localisation:
-Fixed sentence structure with Epinephrine's description
-Fixed grammer issues with pencillin balm
+N/A
 
 Bug Fixes:
 N/A
