@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Diaresinoak</defName>
     <label>diaresinoak</label>
-    <description>An processed and refined extracted alkaloid from the milkleaf plant. Diaresinoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The high quality refining processing makes diaresinoak much more powerful than its predecessor drug without diminishing the patients motor functions. It is noted that the drug having a more powerful effect does negatively effect the patient's breathing. \n\nWhile useful in many mid-worlds as a medicine used in surgeries and reducing pain of patients, the milkleaf family of drugs are known to be quite addictive and have destroyed many lives.</description>
+    <description>A processed and refined extracted alkaloid from the milkleaf plant. Diaresinoak is known for its ability to significantly reduce pain and producing a very pleasurable feeling. The high quality refining processing makes diaresinoak much more powerful than its predecessor drug without diminishing the patients motor functions. It is noted that the drug having a more powerful effect does negatively effect the patient's breathing. \n\nWhile useful in many mid-worlds as a medicine used in surgeries and reducing pain of patients, the milkleaf family of drugs are known to be quite addictive and have destroyed many lives.</description>
     <descriptionHyperlinks>
       <HediffDef>DiaresinoakHigh</HediffDef>
 	  <HediffDef>MilkleafTolerance</HediffDef>

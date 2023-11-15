@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Slumber</defName>
+    <label>slumber</label>
+    <description>Slumber, a nanite enhanced central nervous system depressant, very effectively allows the user to rest more effectively without making them feel tired.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_SlumberHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Slumber</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.65</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>22</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>6</minRewardCount>
+	
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Snort {0}</ingestCommandString>
+      <ingestReportString>Snorting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_SlumberHigh</hediffDef>
+          <severity>0.75</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+	<recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>2</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1100</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	
+	<!--
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	-->
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_SlumberHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>slumber</label>
+    <labelNoun>slumber</labelNoun>
+    <description>Slumber in the bloodstream. The mixture of nanites and chemicals help the body sleep more effectively.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.375</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<RestRateMultiplier>0.40</RestRateMultiplier>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_SlumberHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_SlumberHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>slumber</label>
+        <description>I feel like even a small nap would be like a perfect nights rest.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

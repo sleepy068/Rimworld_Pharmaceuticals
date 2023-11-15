@@ -7,7 +7,7 @@ Changes:
 N/A
 
 Localisation:
-N/A
+Fixed grammer mistake with Diaresinoak description
 
 Bug Fixes:
 N/A

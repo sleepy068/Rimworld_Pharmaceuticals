@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Eludispec</defName>
+    <label>eludispec</label>
+    <description>A solution to a long term problem of non-gender specific, safe but easy to use contraceptive options. Eludispec, a common glitterworld mediation, is able to temporarily and safely make the user completely infertile, thus allowing them to be intimate without running the risk of unexpected pregnancies. While the drug does last quite a long time, once it wears off the users fertility will completely return to normal. \n\nIf the user is already pregnant prior to taking Eludispec, the drug will have no effect on the existing pregnancy.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_EludispecHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Eludispec</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.90</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>16</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>6</minRewardCount>
+	
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_EludispecHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+	<recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>1</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1100</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	
+	<!--
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	-->
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_EludispecHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>safe with eludispec</label>
+    <labelNoun>eludispec</labelNoun>
+    <description>Eludispec in the bloodstream. The concoction of nanites and chemicals temporarily make the user infertile.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0714</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		<fertilityFactor>0.00</fertilityFactor>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_EludispecHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_EludispecHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>safe with eludispec</label>
+        <description>I feel calm knowing I don't have to worry about unexpected pregnancies.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

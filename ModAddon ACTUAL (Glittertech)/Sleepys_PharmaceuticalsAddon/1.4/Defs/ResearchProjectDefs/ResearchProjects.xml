@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>SLP_GlitterMed</defName>
+    <label>glittermedicine</label>
+    <description>Produce ultra-tech medicine by combining nanites, neutroamine, and various other materials.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.00</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Vexatrol</defName>
+    <label>vexatrol</label>
+    <description>x</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_VexatrolHigh</HediffDef>
+	  <HediffDef>SLP_VexatrolTolerance</HediffDef>
+      <HediffDef>SLP_VexatrolAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Vexatrol</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.90</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>400</WorkToMake>-->
+      <MarketValue>45</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+	
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_VexatrolHigh</hediffDef>
+          <severity>1.00</severity>
+          <toleranceChemical>Vexatrol</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_VexatrolTolerance</hediffDef>
+          <severity>0.20</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Vexatrol</chemical>
+        <addictiveness>1.00</addictiveness>
+		<minToleranceToAddict>0.00</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>511</listOrder>
+        <overdoseSeverityOffset>0.00~0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_VexatrolHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>vexatrol</label>
+    <labelNoun>vexatrol</labelNoun>
+    <description>Vexatrol in the bloodstream. It cures addiction.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+	  <li>
+        <compClass>Sleepys_PharmaceuticalsAddon.SLP_HediffComp_CureAddition</compClass>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_VexatrolHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_VexatrolHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>vexatrol</label>
+        <description>I'm been freed from that addiction!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <!-- Vexatrol addiction -->
+
+  <ChemicalDef>
+    <defName>Vexatrol</defName>
+    <label>vexatrol</label>
+    <addictionHediff>SLP_VexatrolAddiction</addictionHediff>
+	<toleranceHediff>SLP_VexatrolTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Vexatrol</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>vexatrol</label>
+    <description>Because of a vexatrol's addiction removal progress, this person will feel the need to periodically consume the vexatrol to avoid withdrawal symptoms. It is important not to feed this addiction as it is part of the addiction purging process.</description>
+    <fallPerDay>1.000</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>SLP_VexatrolAddiction</defName>
+    <label>vexatrol addiction</label>
+    <description>A chemical addiction to vexatrol. \nVexatrol is only able to cure addictions by replacing the current addiction with an addiction to itself. The reason for this is that the withdrawal caused by vexatrol is part of the addiction purging process and is generally not consider a painful experience compared to other drug withdrawals. 
+\n\nIt is important not to feed an addiction to vexatrol. Vexatrol cannot cure an addiction to itself and feeding this addiction will only delay the treatment process.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+	<everCurableByItem>false</everCurableByItem>
+    <causesNeed>Chemical_Vexatrol</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1665</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.1</restFallFactorOffset>
+		<vomitMtbDays>1.5</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>VexatrolWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_VexatrolAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>vexatrol withdrawal</label>
+        <description>I feel sick and nauseous but it's probably better than the alternative.</description>
+        <baseMoodEffect>-4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>SLP_VexatrolTolerance</defName>
+    <label>vexatrol tolerance</label>
+    <description>A bodily response to exposure to vexatrol. Unlike typical drug tolerance, vexatrol never loses its ability to cure addictions.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.10</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Vexatrol</chemical>
+      </li>
+    </comps>
+	<!--
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+	-->
+  </HediffDef>
+
+  
+</Defs>

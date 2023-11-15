@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Oncosuppressor</defName>
+    <label>oncovisis</label>
+    <description>While interestingly, not an overly common medication found on glitterworlds due to a large range of existing oncology medications, procedures and early detection systems, Oncovisis is considered a tertiary defence for preventing and treating cancer within patients. The main support function of the drug is through the programmable nanites that seek and destroy small groups of cancer cells within the user before they can spread or become too problematic. \n\nWhile only a single dose of Oncovisis can help the user for an extremely long time the drug isn't considered foolproof and is considered only 99% effective. Oncovisis cannot outright cure a patient of an active cancer but it will almost entirely reduce its growth, giving the patient time to find other solutions.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_OncosuppressorHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_OncoSup</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.90</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>900</WorkToMake>
+      <MarketValue>28</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>6</minRewardCount>
+	
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_OncosuppressorHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+	<recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>3</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1100</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	
+	<!--
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	-->
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_OncosuppressorHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>oncovisis</label>
+    <labelNoun>oncovisis</labelNoun>
+    <description>Oncovisis in the bloodstream. The amalgam of nanites and chemicals significantly reduces the users chance of developing cancer and almost entirely stopping any cancerous growth.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.033</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<CancerRate>-0.99</CancerRate>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_OncosuppressorHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_OncosuppressorHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>oncovisis</label>
+        <description>To heck with cancer!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

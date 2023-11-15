@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Cocolamine</defName>
+    <label>cocolamine</label>
+    <description>Cocolamine is a psychoactive drug used in an effort to persuade a target of changing their core ideological foundations. It is derived from a class of similar drugs used by military and ideological organisations known as 'truth serums'. While Cocolamine cannot be used in information gathering scenarios, it is highly effective at making the target more susceptible to converting to another ideology. \n\nWhile typically advertised as immoral across many high tech societies, Cocolamine actively sees use in such societies and is usually manufactured in highly ideological or militarised glitterworlds. While it is very powerful, the drug has less effect against those particular strong willed or mentally unstable. Addiction is not often a highly reported problem concerning Cocolamine but the blend of chemicals and nanites used in its manufacture do suggest a painful withdrawal processes should it occur.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_CocolamineHigh</HediffDef>
+	  <HediffDef>SLP_CocolamineTolerance</HediffDef>
+      <HediffDef>SLP_CocolamineAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Cocolamine</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.83</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <MarketValue>25</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+	
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_CocolamineHigh</hediffDef>
+          <severity>0.50</severity>
+          <toleranceChemical>Cocolamine</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_CocolamineTolerance</hediffDef>
+          <severity>0.02</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+    <recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>2</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Cocolamine</chemical>
+        <addictiveness>0.01</addictiveness>
+		<minToleranceToAddict>0.03</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>511</listOrder>
+        <overdoseSeverityOffset>0.15~0.23</overdoseSeverityOffset>
+        <largeOverdoseChance>0.01</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_CocolamineHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on cocolamine</label>
+    <labelNoun>a cocolamine high</labelNoun>
+    <description>Cocolamine in the bloodstream. It is very effective in putting the user into a suggestible state.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.166</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+	  <li>
+	    <statOffsets>
+				<CertaintyLossFactor>3.00</CertaintyLossFactor>
+		</statOffsets>
+	  </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_CocolamineHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_CocolamineHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on cocolamine</label>
+        <description>Everyone is making some really good points lately!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <!-- Cocolamine addiction -->
+
+  <ChemicalDef>
+    <defName>Cocolamine</defName>
+    <label>cocolamine</label>
+    <addictionHediff>SLP_CocolamineAddiction</addictionHediff>
+	<toleranceHediff>SLP_CocolamineTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Cocolamine</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>cocolamine</label>
+    <description>Because of a cocolamine addiction, this person needs to consume the drug fairly often to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.667</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>SLP_CocolamineAddiction</defName>
+    <label>cocolamine addiction</label>
+    <description>A chemical addiction to cocolamine. Long-term presence of cocolamine has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of cocolamine, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Cocolamine</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1125</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.35</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.40</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Tantrum</mentalState>
+            <mtbDays>60</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>20</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>CocolamineWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_CocolamineAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>cocolamine withdrawal</label>
+        <description>I can barely think let alone tell which thoughts are my own!!!</description>
+        <baseMoodEffect>-48</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>SLP_CocolamineTolerance</defName>
+    <label>Cocolamine tolerance</label>
+    <description>A built-up tolerance to Cocolamine. The more severe this tolerance is, the more Cocolamine it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.005</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Cocolamine</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  
+</Defs>
