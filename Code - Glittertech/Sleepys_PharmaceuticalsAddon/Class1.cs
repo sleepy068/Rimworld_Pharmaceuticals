@@ -9,31 +9,25 @@ using UnityEngine;
 
 namespace Sleepys_PharmaceuticalsAddon
 {
-    public class SLP_HediffComp_CureAddition : HediffComp
+    public class SLP_CompGiveInspiration : ThingComp
     {
-        public void SLP_CureAddiction(Pawn pawn)
+        public SLP_CompProperties_GiveInspiration Props => (SLP_CompProperties_GiveInspiration)this.props;
+
+        public override void PrePostIngested(Pawn ingester)
         {
-            Hediff_Addiction addiction = SLP_PHA_Utilities.SLP_FindAddiction(pawn);
-            if (addiction != null)
-                pawn.health.RemoveHediff(addiction);
-            else
-                System.Console.WriteLine("Pawn had no addiction to cure");
+            if (ingester == null)
+                return;
+            InspirationDef SLP_inspiration = this.Props.SLP_inspiration;
+            if (SLP_inspiration != null)
+                ingester.mindState.inspirationHandler.TryStartInspiration(SLP_inspiration);
         }
     }
 
-    public class SLP_PHA_Utilities
+    public class SLP_CompProperties_GiveInspiration : CompProperties
     {
-        public static Hediff_Addiction SLP_FindAddiction(Pawn pawn)
-        {
-            List<Hediff> hediffs = pawn.health.hediffSet.hediffs.ToList();
-            for (int index = 0; index < hediffs.Count; ++index)
-            {
-                //if (hediffs[index] is Hediff_Addiction addiction && addiction.Visible && addiction.def.everCurableByItem)
-                if (hediffs[index] is Hediff_Addiction addiction)
-                return addiction;
-            }
-            return (Hediff_Addiction)null;
-        }
+        public InspirationDef SLP_inspiration;
 
+        public SLP_CompProperties_GiveInspiration() => this.compClass = typeof (SLP_CompGiveInspiration);
     }
+
 }
