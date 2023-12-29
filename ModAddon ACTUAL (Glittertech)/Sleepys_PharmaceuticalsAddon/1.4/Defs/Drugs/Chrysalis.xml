@@ -81,7 +81,7 @@
   <HediffDef>
     <defName>SLP_ChrysalisHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>steeled on chrysalis</label>
+    <label>chrysalis</label>
     <labelNoun>a chrysalis high</labelNoun>
     <description>Chrysalis in the bloodstream. It hardens the bone, skin and muscles to reduce incoming damage but increases pain sensitivity.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>

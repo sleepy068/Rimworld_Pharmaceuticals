@@ -69,7 +69,7 @@
   <HediffDef>
     <defName>SLP_EludispecHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>safe with eludispec</label>
+    <label>eludispec</label>
     <labelNoun>eludispec</labelNoun>
     <description>Eludispec in the bloodstream. The concoction of nanites and chemicals temporarily make the user infertile.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>

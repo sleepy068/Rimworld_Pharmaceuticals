@@ -69,8 +69,8 @@
   <HediffDef>
     <defName>SLP_ThermaxHigh</defName>
     <hediffClass>Hediff_High</hediffClass>
-    <label>a thermax shield</label>
-    <labelNoun>a thermax shield</labelNoun>
+    <label>Thermax shield</label>
+    <labelNoun>Thermax shield</labelNoun>
     <description>Thermax in the bloodstream. The blend of nanites and chemicals help the body regulate temperature control.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
@@ -100,7 +100,7 @@
 	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
     <stages>
       <li>
-        <label>thermax</label>
+        <label>thermax shield</label>
         <description>I feel snug and comfy, cold snaps and heat waves bring it on!</description>
         <baseMoodEffect>0</baseMoodEffect>
       </li>
