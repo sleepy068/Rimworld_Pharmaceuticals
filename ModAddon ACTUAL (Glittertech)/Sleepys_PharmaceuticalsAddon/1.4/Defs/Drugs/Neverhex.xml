@@ -3,8 +3,8 @@
 
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Neverhex</defName>
-    <label>aloeasix</label>
-    <description>x</description>
+    <label>neverhex</label>
+    <description>Neverhex is an extremely effective and relatively safe mood booster used in high tech societies. Considered a social drug and often taken during high end dinner parties or laid back business meetings as a way to boost the user. Despite its effectiveness and how safe the drug is to use, it is addictive and while not an overly painful process, it can take some time for withdrawal to clear.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_NeverhexHigh</HediffDef>
 	  <HediffDef>SLP_HexicTolerance</HediffDef>
@@ -149,31 +149,21 @@
       </li>
       <li>
         <label>withdrawal</label>
-        <restFallFactorOffset>0.2</restFallFactorOffset>
+        <restFallFactorOffset>0.1</restFallFactorOffset>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.05</offset>
           </li>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.10</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
-            <offset>-0.30</offset>
+            <offset>-0.10</offset>
           </li>
         </capMods>
-        <mentalStateGivers>
-          <li>
-            <mentalState>Binging_DrugExtreme</mentalState>
-            <mtbDays>60</mtbDays>
-          </li>
-          <li>
-            <mentalState>Wander_Psychotic</mentalState>
-            <mtbDays>20</mtbDays>
-          </li>
-        </mentalStateGivers>
       </li>
     </stages>
   </HediffDef>
@@ -190,8 +180,8 @@
       </li>
       <li>
         <label>hexic withdrawal</label>
-        <description>x</description>
-        <baseMoodEffect>-16</baseMoodEffect>
+        <description>While things could be worse, they could be much better...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -202,7 +192,7 @@
     <description>A built-up tolerance to Hexic. The more severe this tolerance is, the more Hexic it takes to get the same effect.</description>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
+        <severityPerDay>-0.025</severityPerDay>
       </li>
       <li Class="HediffCompProperties_DrugEffectFactor">
         <chemical>Hexic</chemical>

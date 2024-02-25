@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Chrysalis</defName>
     <label>chrysalis</label>
-    <description>x</description>
+    <description>Chrysalis is a drug that helps reduce the impact the user takes from damage by creating a web of nanites within the dermis of the skin. By chaining these nanites the system can control rapid localised swelling and muscle contraction to help soften incoming blows while also repairing the minor damage these actions force on the body. While it does reduce incoming damage, it isn't perfect, the drug has a fairly high chance of overdose, it is addictive and the entire defensive system is uncomfortable and makes the user much more sensitive to pain.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_ChrysalisHigh</HediffDef>
 	  <HediffDef>SLP_BasalsaltTolerance</HediffDef>
@@ -119,7 +119,7 @@
     <stages>
       <li>
         <label>steeled on chrysalis</label>
-        <description>I can feel pins and needles but I feel as tough as stone.</description>
+        <description>I feel pins and needles but I feel as tough as stone.</description>
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
@@ -154,7 +154,7 @@
     <causesNeed>Chemical_Basalsalt</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.045</severityPerDay>
+        <severityPerDay>-0.150</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -166,28 +166,14 @@
         <restFallFactorOffset>0.2</restFallFactorOffset>
         <capMods>
           <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
             <capacity>Moving</capacity>
-            <offset>-0.20</offset>
+            <offset>-0.30</offset>
           </li>
           <li>
             <capacity>Manipulation</capacity>
             <offset>-0.30</offset>
           </li>
         </capMods>
-        <mentalStateGivers>
-          <li>
-            <mentalState>Binging_DrugExtreme</mentalState>
-            <mtbDays>60</mtbDays>
-          </li>
-          <li>
-            <mentalState>Wander_Psychotic</mentalState>
-            <mtbDays>20</mtbDays>
-          </li>
-        </mentalStateGivers>
       </li>
     </stages>
   </HediffDef>
@@ -204,8 +190,8 @@
       </li>
       <li>
         <label>basalsalt withdrawal</label>
-        <description>x</description>
-        <baseMoodEffect>-16</baseMoodEffect>
+        <description>I feel stiff, uneasy and my fingers feel numb...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>

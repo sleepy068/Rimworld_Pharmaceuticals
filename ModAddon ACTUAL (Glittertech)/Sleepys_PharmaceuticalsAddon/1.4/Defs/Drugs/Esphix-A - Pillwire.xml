@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Pillwire</defName>
     <label>pillwire</label>
-    <description>x</description>
+    <description>When the medical drug Rapidthink was eventually replaced and outlawed in Glitterworld societies, the drug quickly moved to the black markets. To maintain supply, it needed to be manufactured in secret but in trying to fine tune the recipe, black market scientists accidentally stumbled across a new drug they named Pillwire. Using the same active chemical Esphix-A, Pillwire significantly increases the users mood by hijacking a multitude of signal pathways and overriding problematic sectors of brain activity. While the results were not what was expected as the new drug resulted in a drop in mental capacity instead of a boost, it was arguably safer then Rapidthink concerning overdose chance and a mood enhancing drug is rarely shunned in the illegal drug markets.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_PillwireHigh</HediffDef>
 	  <HediffDef>SLP_EsphixATolerance</HediffDef>
@@ -109,7 +109,7 @@
       <li>
         <label>high on pillwire</label>
         <description>I'm not sure my life can get any better!</description>
-        <baseMoodEffect>18</baseMoodEffect>
+        <baseMoodEffect>24</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -193,7 +193,7 @@
       </li>
       <li>
         <label>Esphix-A withdrawal</label>
-        <description>x</description>
+        <description>I have a pounding headache... Was thinking always this hard?</description>
         <baseMoodEffect>-16</baseMoodEffect>
       </li>
     </stages>

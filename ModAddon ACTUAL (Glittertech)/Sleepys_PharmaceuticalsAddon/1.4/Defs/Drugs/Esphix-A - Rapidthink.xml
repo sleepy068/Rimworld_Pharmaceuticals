@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Rapidthink</defName>
     <label>rapidthink</label>
-    <description>x</description>
+    <description>Rapidthink was initially introduced as a means to help patients with traumatic brain injuries to live more comfortably and recover as much brain function as possible in the early days of such an injury. Typically administered during the emergency medical response and followed up by surgery or nanite brain system restoration programs. While very effective, the main active chemical Esphix-A, had too many dangers to be ignored such as high addictiveness (compared to other glitterworld medicines) and a much larger overdose chance. These problems led to it eventually been replaced by most glitterworld societies with safer, albeit slower, alternatives. \n\nWhile outlawed in most glitterworlds, the drug does see use in the illegal sectors, usually abused by shady research firms as a means to boost staff cognitive performance and productivity.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_RapidthinkHigh</HediffDef>
 	  <HediffDef>SLP_EsphixATolerance</HediffDef>

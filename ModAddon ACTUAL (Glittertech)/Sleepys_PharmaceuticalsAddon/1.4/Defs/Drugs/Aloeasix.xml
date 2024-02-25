@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Aloeasix</defName>
     <label>aloeasix</label>
-    <description>x</description>
+    <description>Aloeasix, a very effective pain reliever that uses nanites to hijack pain signals from the brain but also actively assist the body in recovery by reducing swelling and physical effects of damage, thus further reducing pain. Despite how effective the drug is, there is still a risk of addiction due to the dependency effects pain relievers can have on the user.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_AloeasixHigh</HediffDef>
 	  <HediffDef>SLP_AloeasixTolerance</HediffDef>
@@ -146,7 +146,7 @@
     <causesNeed>Chemical_Aloeasix</causesNeed>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.045</severityPerDay>
+        <severityPerDay>-0.066</severityPerDay>
         <showDaysToRecover>true</showDaysToRecover>
       </li>
     </comps>
@@ -172,10 +172,6 @@
         </capMods>
         <mentalStateGivers>
           <li>
-            <mentalState>Binging_DrugExtreme</mentalState>
-            <mtbDays>60</mtbDays>
-          </li>
-          <li>
             <mentalState>Wander_Psychotic</mentalState>
             <mtbDays>20</mtbDays>
           </li>
@@ -196,7 +192,7 @@
       </li>
       <li>
         <label>aloeasix withdrawal</label>
-        <description>x</description>
+        <description>I feel uneasy, shaky and just too tried.</description>
         <baseMoodEffect>-16</baseMoodEffect>
       </li>
     </stages>

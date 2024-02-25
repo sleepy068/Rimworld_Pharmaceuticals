@@ -4,7 +4,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>SLP_Thermax</defName>
     <label>thermax</label>
-    <description>x</description>
+    <description>Thermax, a drug typically found on high tech worlds that are within the sub-optimal goldlock's zones of their stars, usually resulting in a planet too hot or too cold to support all but the hardy or lucky. The drug complements the body's ability to control body heat by creating a thin thermal layer when too cold or by creating microscopic heat sinks when too hot making it much easier for the user to survive in extreme conditions.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_ThermaxHigh</HediffDef>
     </descriptionHyperlinks>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Cocolamine</defName>
     <label>cocolamine</label>
-    <description>Cocolamine is a psychoactive drug used in an effort to persuade a target of changing their core ideological foundations. It is derived from a class of similar drugs used by military and ideological organisations known as 'truth serums'. While Cocolamine cannot be used in information gathering scenarios, it is highly effective at making the target more susceptible to converting to another ideology. \n\nWhile typically advertised as immoral across many high tech societies, Cocolamine actively sees use in such societies and is usually manufactured in highly ideological or militarised glitterworlds. While it is very powerful, the drug has less effect against those particular strong willed or mentally unstable. Addiction is not often a highly reported problem concerning Cocolamine but the blend of chemicals and nanites used in its manufacture do suggest a painful withdrawal processes should it occur.</description>
+    <description>Cocolamine is a psychoactive drug used in an effort to persuade a target of changing their core ideological foundations. It is derived from a class of similar drugs used by military and ideological organisations known as 'truth serums'. While Cocolamine cannot be used in information gathering scenarios, it is highly effective at making the target more susceptible to converting to another ideology. \n\nWhile typically advertised as immoral across many high tech societies, Cocolamine actively sees use in such societies and is usually manufactured in highly ideological or militarised glitterworlds. While it is very powerful, the drug has less effect against those that are particularly strong willed or mentally unstable. Addiction is not often a highly reported problem concerning Cocolamine but the blend of chemicals and nanites used in its manufacture do suggest an extremely painful withdrawal processes should it occur.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_CocolamineHigh</HediffDef>
 	  <HediffDef>SLP_CocolamineTolerance</HediffDef>
@@ -199,7 +199,7 @@
       <li>
         <label>cocolamine withdrawal</label>
         <description>I can barely think let alone tell which thoughts are my own!!!</description>
-        <baseMoodEffect>-48</baseMoodEffect>
+        <baseMoodEffect>-40</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
