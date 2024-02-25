@@ -4,7 +4,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>SLP_Technica</defName>
     <label>technica</label>
-    <description>Technica, is an ultra tech medication used to inspire the user via a digestible nanite neural support network that effectively allows them to craft items to a higher level of quality by providing a creativity inspiration. The drug won't have any effect if the user is already inspired.</description>
+    <description>Technica, is an ultra tech medication used to inspire the user via a digestible nanite neural support network that effectively allows them to craft items to a higher level of quality by providing a creativity inspiration. \n\nThe drug won't have any effect if the user is already inspired.</description>
     <descriptionHyperlinks>
       <HediffDef>SLP_TechnicaHigh</HediffDef>
     </descriptionHyperlinks>

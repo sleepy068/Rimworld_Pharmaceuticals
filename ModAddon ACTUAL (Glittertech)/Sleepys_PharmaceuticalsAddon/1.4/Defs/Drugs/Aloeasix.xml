@@ -69,7 +69,7 @@
       <li Class="CompProperties_Drug">
         <chemical>Aloeasix</chemical>
         <addictiveness>0.01</addictiveness>
-		<minToleranceToAddict>0.015</minToleranceToAddict>
+		<minToleranceToAddict>0.035</minToleranceToAddict>
         <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
         <needLevelOffset>0.9</needLevelOffset>
         <listOrder>511</listOrder>
@@ -192,7 +192,7 @@
       </li>
       <li>
         <label>aloeasix withdrawal</label>
-        <description>I feel uneasy, shaky and just too tried.</description>
+        <description>I feel uneasy, shaky and just too tried to deal with today.</description>
         <baseMoodEffect>-16</baseMoodEffect>
       </li>
     </stages>

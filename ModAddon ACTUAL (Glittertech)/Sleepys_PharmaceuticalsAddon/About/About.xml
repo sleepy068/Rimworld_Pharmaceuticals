@@ -12,36 +12,46 @@
 [img]https://i.imgur.com/Fmo0K99.png[/img]
 
 [h2]Sleepy's Pharmaceuticals - Glitterworld Medicine (v1.0.0)[/h2]
+A standalone additional to my Sleepy's Pharmaceuticals mod. I love the drug mechanics in this game but I wanted to be able to have more late game drug options.
+
+I love to add content to this game that I feel is missing or that I'd like expanded. I figure that if I enjoy what I've added, others may too so I to post my mods to the workshop. Balance is critical to me as I am a vanilla player and I'll try to ensure nothing is unbalanced but ultimately I have a goal in mind for the content I am adding so what I consider balanced may not always be what you'd consider balanced. Hopefully you enjoy the mod none the less.
+
+You can find the stats of all drugs added by Sleepy's Pharmaceuticals - Glitterworld Medicine here:
 
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
-X New Pharmaceuticals:
-- X Medical Drugs
-- X Social Drugs
-- X Hard Drugs
-- Y Cosmetics
-- Y Medicines
-- Y Exotic Drugs (Trade or Reward Only)
+12 New Pharmaceuticals:
+- 6 Medical Drugs
+- 1 Social Drugs
+- 3 Hard Drugs
+- 1 Exotic Drugs (Trade or Reward Only)
 
-New plants (used to make some drugs)
-- Y
+New material:
+[img]https://i.imgur.com/P2hpmWs.png[/img]
 
-[b]Medical Drugs[/b]
+[img]https://i.imgur.com/OpVbzQD.png[/img]
+[img]https://i.imgur.com/RjUUyg3.png[/img]
+[img]https://i.imgur.com/ZREzIOq.png[/img]
+[img]https://i.imgur.com/FM7nu3k.png[/img]
+[img]https://i.imgur.com/dat7OtW.png[/img]
+[img]https://i.imgur.com/Pv0i3Bn.png[/img]
+[img]https://i.imgur.com/glqFwxe.png[/img]
+[img]https://i.imgur.com/Jt1avqA.png[/img]
 
-[b]Social Drugs[/b]
+[img]https://i.imgur.com/xvDimh6.png[/img]
+[img]https://i.imgur.com/b1mERp0.png[/img]
 
-[b]Hard Drugs[/b]
+[img]https://i.imgur.com/NFlVs7B.png[/img]
+[img]https://i.imgur.com/o4rCCCj.png[/img]
+[img]https://i.imgur.com/ARi0iUG.png[/img]
+[img]https://i.imgur.com/Nq5xLlI.png[/img]
 
-[b]Exotic Drugs[/b]
-
-[b]Cosmetics[/b]
-
-[b]Medicine[/b]
+[img]https://i.imgur.com/TBjHygk.png[/img]
+[img]https://i.imgur.com/lSjnvaV.png[/img]
 
 [img]https://i.imgur.com/ss8ZNXk.png[/img]
 [b]Roadmap:[/b]
--
-- Balancing where needed.
+- Balancing. 
 
 [img]https://i.imgur.com/YySbEPN.png[/img]
 [b]Dependencies:[/b]
@@ -80,6 +90,7 @@ Please post any issue reports to my Github. I appreciate any feedback but please
     </modDependenciesByVersion>
 
     <loadAfter>
+	<li>sleepy068.pharmaceuticals</li>
     </loadAfter>
 
     <incompatibleWith>
