@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>SLP_Eureka</defName>
     <label>eureka</label>
-    <description>A synthetic stimulant drug of the shboombloom synthesis class. It is a moderately powerful study aid that boost learning and research speeds.</description>
+    <description>A synthetic stimulant drug of the shboombloom synthesis class. It is a moderately powerful study aid that boosts learning and research speeds.</description>
     <descriptionHyperlinks>
       <HediffDef>EurekaHigh</HediffDef>
 	  <HediffDef>EurekaTolerance</HediffDef>

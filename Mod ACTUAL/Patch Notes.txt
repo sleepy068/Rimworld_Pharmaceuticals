@@ -1,13 +1,12 @@
-Update v1.4.10 Build 02/10/23 | Post 
+Update v1.4.11 Build 17/03/24 | Post 
 
 Additions:
 N/A
 
 Changes:
 N/A
-
 Localisation:
-Fixed grammer mistake with Diaresinoak description
+N/A
 
 Bug Fixes:
 N/A

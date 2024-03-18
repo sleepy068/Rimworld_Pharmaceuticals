@@ -7,22 +7,25 @@
     <supportedVersions>
         <li>1.3</li>
 		<li>1.4</li>
+		<li>1.5</li>
     </supportedVersions>
 
     <description>
 [img]https://i.imgur.com/Fmo0K99.png[/img]
 
-[h2]Sleepy's Pharmaceuticals (v1.4.5)[/h2]
+[h2]Sleepy's Pharmaceuticals (v1.4.9)[/h2]
 I absolutely love the drug mechanics in this game, they are highly risky but can turn the tide if used correctly. I am trying to replicate the feel vanilla drugs have (i play with very few mods and want to keep the balance). They will have niche uses and can help in tough situations but ultimately they will be risky to use.
 
 I love to add content to this game that I feel is missing or that I'd like expanded. I figure that if I enjoy what I've added, others may too so I to post my mods to the workshop. Balance is critical to me as I am a vanilla player and I'll try to ensure nothing is unbalanced but ultimately I have a goal in mind for the content I am adding so what I consider balanced may not always be what you'd consider balanced. Hopefully you enjoy the mod none the less.
 
+You can find the stats of all drugs added by Sleepy's Pharmaceuticals here:
+
 [img]https://i.imgur.com/DbnM7jC.png[/img]
 [b]What Does This Mod Add?[/b]
-41 New Pharmaceuticals:
+40 New Pharmaceuticals:
 - 20 Medical Drugs
 - 2 Social Drugs
-- 10 Hard Drugs
+- 9 Hard Drugs
 - 2 Cosmetics
 - 2 Medicines
 - 5 Exotic Drugs (Trade or Reward Only)
@@ -34,7 +37,7 @@ New plants (used to make some drugs)
 - Aloe Vera
 - Shboombloom
 
-[b]Medical Drugs[/b]
+[img]https://i.imgur.com/OpVbzQD.png[/img]
 [img]https://i.imgur.com/93HjotR.png[/img]
 [img]https://i.imgur.com/6JAipzF.png[/img]
 [img]https://i.imgur.com/Q7rys4o.png[/img]
@@ -57,11 +60,11 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/r3HzhzN.png[/img]
 [img]https://i.imgur.com/EqPL5ws.png[/img]
 
-[b]Social Drugs[/b]
+[img]https://i.imgur.com/xvDimh6.png[/img]
 [img]https://i.imgur.com/gk8TRN5.png[/img]
 [img]https://i.imgur.com/VYP9X4L.png[/img]
 
-[b]Hard Drugs[/b]
+[img]https://i.imgur.com/NFlVs7B.png[/img]
 [img]https://i.imgur.com/aMsm0Xl.png[/img]
 [img]https://i.imgur.com/kPOtL4C.png[/img]
 [img]https://i.imgur.com/0N1iSKW.png[/img]
@@ -72,18 +75,18 @@ New plants (used to make some drugs)
 [img]https://i.imgur.com/8rKZ8kf.png[/img]
 [img]https://i.imgur.com/hSfhOO9.png[/img]
 
-[b]Exotic Drugs[/b]
+[img]https://i.imgur.com/TBjHygk.png[/img]
 [img]https://i.imgur.com/KjciT4t.png[/img]
 [img]https://i.imgur.com/k8MuIb6.png[/img]
 [img]https://i.imgur.com/BnROvu9.png[/img]
 [img]https://i.imgur.com/Ar1GaHH.png[/img]
 [img]https://i.imgur.com/i7oXoLD.png[/img]
 
-[b]Cosmetics[/b]
+[img]https://i.imgur.com/1Q5qUxv.png[/img]
 [img]https://i.imgur.com/gZ2BHcv.png[/img]
 [img]https://i.imgur.com/mfc1f25.png[/img]
 
-[b]Medicine[/b]
+[img]https://i.imgur.com/9EJcAVS.png[/img]
 [img]https://i.imgur.com/A4kmwPM.png[/img]
 [img]https://i.imgur.com/apNvAxB.png[/img]
 
@@ -119,7 +122,8 @@ Github:
 https://github.com/sleepy068/Rimworld_Pharmaceuticals
 
 Please post any issue reports to my Github. I appreciate any feedback but please keep in mind I have a goal in mind for the content I am adding so what I consider balanced may not always be what you'd consider balanced.
-</description>
+	
+	</description>
 
     <modDependencies>
 	<li>
