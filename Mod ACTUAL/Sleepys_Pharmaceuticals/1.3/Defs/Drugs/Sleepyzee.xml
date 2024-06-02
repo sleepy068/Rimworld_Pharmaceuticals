@@ -75,7 +75,7 @@
       <stages>
         <li>
 		  <statOffsets>
-			<RestRateMultiplier>1.25</RestRateMultiplier>
+			<RestRateMultiplier>0.25</RestRateMultiplier>
 		  </statOffsets>
           <capMods>
           </capMods>
