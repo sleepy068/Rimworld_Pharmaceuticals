@@ -1,10 +1,10 @@
-Update v1.0.2 Build 17/03/24 | Post 
+Update v1.0.2 Build 27/06/24 | Post 
 
 Additions:
 N/A
 
 Changes:
-1.5 Compatibility
+Changed Nanites possessionCount from null to 5 (trying to make these appear a bit more, I've honestly never really seen anyone have them in game)
 
 Localisation:
 N/A

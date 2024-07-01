@@ -5,6 +5,7 @@
     <defName>SLP_Nanites</defName>
     <label>nanites</label>
     <description>A fine powder that contains millions of programmable nanites, it is used in the manufacturing a handful of useful drugs.</description>
+	<possessionCount>5</possessionCount>
     <graphicData>
       <texPath>Things/Item/Drug/SLP_Precursor_Nanites</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
