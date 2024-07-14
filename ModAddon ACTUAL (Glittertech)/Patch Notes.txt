@@ -10,4 +10,4 @@ Localisation:
 N/A
 
 Bug Fixes:
-N/A
+Technica was setup as an eaten/consumed drug instead of an injecting drug, despite the graphic suggesting the latter (fixed).

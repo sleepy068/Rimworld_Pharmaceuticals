@@ -23,10 +23,19 @@
     <techLevel>Ultra</techLevel>
     <minRewardCount>3</minRewardCount>
     <ingestible>
-      <foodType>Processed</foodType>
+      <foodType>Processed, Fluid</foodType>
       <drugCategory>Medical</drugCategory>
-      <baseIngestTicks>100</baseIngestTicks>
-      <ingestSound>Ingest_Pill</ingestSound>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>SLP_TechnicaHigh</hediffDef>

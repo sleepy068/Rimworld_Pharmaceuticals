@@ -102,12 +102,12 @@
     </comps>
       <stages>
         <li>
-		  <hungerRateFactorOffset>-0.40</hungerRateFactorOffset>
-		  <restFallFactor>0.60</restFallFactor>
+		  <hungerRateFactorOffset>-0.60</hungerRateFactorOffset>
+		  <restFallFactor>0.40</restFallFactor>
 		  <statOffsets>
-				<GlobalLearningFactor>-0.75</GlobalLearningFactor>
-				<SocialImpact>-0.50</SocialImpact>
-				<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+				<GlobalLearningFactor>-0.50</GlobalLearningFactor>
+				<SocialImpact>-0.35</SocialImpact>
+				<MentalBreakThreshold>-0.25</MentalBreakThreshold>
 		  </statOffsets>
         </li>
       </stages>
