@@ -4,7 +4,8 @@ Additions:
 N/A
 
 Changes:
-Changed Nanites possessionCount from null to 5 (trying to make these appear a bit more, I've honestly never really seen anyone have them in game)
+Nanites Possession Count changed from null to 5 (trying to make these appear a bit more, I've honestly never really seen anyone have them in game)
+Nanites Exotic Misc tag removed (hopefully to help it show up more, as common as neutroamine with traders at least).
 
 Localisation:
 N/A

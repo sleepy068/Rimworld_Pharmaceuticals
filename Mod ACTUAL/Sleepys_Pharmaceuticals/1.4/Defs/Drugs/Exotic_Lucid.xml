@@ -4,7 +4,7 @@
   <ThingDef ParentName="DrugBase">
     <defName>SLP_Lucid</defName>
     <label>lucid</label>
-    <description>Lucid, is an ultra tech medication used to significantly boosts the users mood via nanites that balance hormonal levels and help the body maintain a mentally healthy state. While the effect doesn't really change, higher doses of the drug tends to maintain the effect for a much longer time.</description>
+    <description>Lucid, is an ultra tech medication used to significantly boost the users mood via nanites that balance hormonal levels and help the body maintain a mentally healthy state. While the effect doesn't really change, higher doses of the drug tends to maintain the effect for a much longer time.</description>
     <descriptionHyperlinks>
       <HediffDef>LucidHigh</HediffDef>
     </descriptionHyperlinks>

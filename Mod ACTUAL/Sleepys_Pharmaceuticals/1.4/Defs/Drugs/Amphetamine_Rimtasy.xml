@@ -92,7 +92,7 @@
 		  <statOffsets>
 				<ComfyTemperatureMax>-7</ComfyTemperatureMax>
 				<NegotiationAbility>0.10</NegotiationAbility>
-				<SocialImpact>0.06</SocialImpact>
+				<SocialImpact>0.10</SocialImpact>
 		  </statOffsets>
           <capMods>
             <li>

@@ -23,9 +23,6 @@
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>
-	<tradeTags>
-      <li>ExoticMisc</li>
-    </tradeTags>
   </ThingDef>
   
 </Defs>

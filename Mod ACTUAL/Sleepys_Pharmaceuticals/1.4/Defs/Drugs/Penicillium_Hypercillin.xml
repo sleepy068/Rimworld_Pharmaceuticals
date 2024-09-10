@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>SLP_Hypercillin</defName>
     <label>hypercillin</label>
-    <description>A powerful and augmented synthesised version of Penicillin. Created on Glitterworlds in an effort to provide a powerful antibiotic. Greatly helps boost the users immunity gain speed and recovery from illness from bacterial and viral infections.</description>
+    <description>A powerful and augmented synthetic version of Penicillin. Created on Glitterworlds in an effort to provide a powerful antibiotic. Greatly helps boost the users immunity gain speed and recovery from illness from bacterial and viral infections.</description>
     <descriptionHyperlinks>
       <HediffDef>HypercillinHigh</HediffDef>
     </descriptionHyperlinks>
