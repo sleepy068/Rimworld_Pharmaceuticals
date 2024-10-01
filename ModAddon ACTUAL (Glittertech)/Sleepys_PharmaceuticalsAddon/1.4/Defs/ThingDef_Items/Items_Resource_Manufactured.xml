@@ -20,6 +20,12 @@
       <Flammability>0.7</Flammability>
       <DeteriorationRate>1.0</DeteriorationRate>
     </statBases>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
     <thingCategories>
       <li>Manufactured</li>
     </thingCategories>
