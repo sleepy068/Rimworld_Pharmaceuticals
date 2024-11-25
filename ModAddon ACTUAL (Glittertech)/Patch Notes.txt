@@ -1,14 +1,13 @@
-Update v1.0.2 Build 27/06/24 | Post 
+Update v1.0.4 Build 24/11/24 | Post 
 
 Additions:
 N/A
 
 Changes:
-Nanites Possession Count changed from null to 5 (trying to make these appear a bit more, I've honestly never really seen anyone have them in game)
-Nanites Exotic Misc tag removed (hopefully to help it show up more, as common as neutroamine with traders at least).
+N/A
 
 Localisation:
 N/A
 
 Bug Fixes:
-Technica was setup as an eaten/consumed drug instead of an injecting drug, despite the graphic suggesting the latter (fixed).
+N/A
