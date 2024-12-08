@@ -5,7 +5,7 @@ Additions:
 N/A
 
 Changes:
-N/A
+Fixed up the hover over description for the Pharmaceuticals research tab.
 
 Localisation:
 N/A
