@@ -8,7 +8,7 @@ Changes:
 Fixed up the hover over description for the Pharmaceuticals research tab.
 
 Localisation:
-N/A
+Grammer.
 
 Bug Fixes:
 N/A
