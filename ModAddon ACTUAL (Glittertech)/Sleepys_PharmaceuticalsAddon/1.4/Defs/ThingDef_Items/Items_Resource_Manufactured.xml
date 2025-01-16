@@ -20,15 +20,13 @@
       <Flammability>0.7</Flammability>
       <DeteriorationRate>1.0</DeteriorationRate>
     </statBases>
+	<allowedArchonexusCount>25</allowedArchonexusCount>
 	<tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
     <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
     </thingSetMakerTags>
-    <thingCategories>
-      <li>Manufactured</li>
-    </thingCategories>
   </ThingDef>
   
 </Defs>

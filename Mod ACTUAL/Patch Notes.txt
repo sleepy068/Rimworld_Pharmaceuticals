@@ -5,7 +5,7 @@ Additions:
 N/A
 
 Changes:
-Fixed up the hover over description for the Pharmaceuticals research tab.
+N/A
 
 Localisation:
 Grammer.
