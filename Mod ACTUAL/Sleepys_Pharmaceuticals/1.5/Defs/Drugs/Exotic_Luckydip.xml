@@ -54,7 +54,7 @@
     <hediffClass>Hediff_High</hediffClass>
     <label>luckydip</label>
     <labelNoun>a luckydip high</labelNoun>
-    <description>Luckydip in the bloodstream. It can create the effects of a random drug.</description>
+    <description>Luckydip in the bloodstream. It can replicate the effects of random drugs.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
