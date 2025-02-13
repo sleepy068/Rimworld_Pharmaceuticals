@@ -1,14 +1,33 @@
-Update v1.4.15 Build 03/09/24 | Post 
-*Adjustments, excluding bug fixes, will only be made to the Rimworld 1.4/1.5 Version of this mod (just a hassle maintaining both sorry)
+Update v1.4.16 Build 10/02/25 | Post 
+*Adjustments, excluding bug fixes, will only be made to the Rimworld 1.5 Version of this mod (just a hassle maintaining both sorry)
 
 Additions:
-N/A
+Added 1 New Drug
+- Luckydip
 
 Changes:
-N/A
+--- These changes have been applied to version 1.4 too ---
+Increased Fusidic Balm effect duration from 1.3 Days to 1.7 Days
+Increased Aloe Vera Balm effect duration from 0.7 Days to 0.8 Days
+Increased Penicillin Balm effect duration from 0.6 Days to 0.7 Days
+Increased Eureka effect duration from 0.5 Days to 0.6 Days
+Added Reading Speed +30% to Eureka effects
+Added Hacking Speed +30% to Eureka effects (Ideology Only)
+Added Learning Rate Factor +30% to Eureka effects (Biotech Only)
+Added Mechinator Skills (Subcore encoding, forming, repair, etc) +30% to Eureka effects (Biotech Only)
+Increased Pep minToleranceToAddict from 0% to 5%
+Increased Pep Tolerance Fall Rate from 1% to 2%
+Increased Dreamer effect duration from 0.4 Days to 0.6 Days 
+Reduced Dreamer withdrawal base mood effect from -16 to -12 (just a little easier to manage)
+Increased Rimshroom effect duration from 0.3 Days to 0.5 Days
+Increased Rimshroom Tea effect duration from 0.3 Days to 0.4 Days
+Increased Hypercillin effect duration from 0.5 Days to 0.6 Days
+
+Increased Dreamer Tolerance Gain from 2% to 3% per dose
+Increased Pep Withdrawal Duration (from 2 days to 4 days)
 
 Localisation:
-Grammer.
+N/A
 
 Bug Fixes:
 N/A

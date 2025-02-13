@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>SLP_Penicillin</defName>
+    <label>penicillin</label>
+    <description>A modified version of Penicillin obtained from genetically modified Penicillium moulds. Helps boost the users immunity gain speed and recovery from illness from bacterial and viral infections.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PenicillinHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Penicillin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>9</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PenicillinHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>MedicalMouldFarming</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <SLP_Penicillium>8</SLP_Penicillium>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>430</listOrder>
+        <overdoseSeverityOffset>0</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>PenicillinHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>penicillin</label>
+    <labelNoun>penicillin</labelNoun>
+    <description>Penicillin in the bloodstream. It helps fight off infections.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+			<statOffsets>
+				<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+</Defs>
