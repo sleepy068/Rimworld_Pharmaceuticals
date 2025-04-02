@@ -103,7 +103,7 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>SLP_Penicillium</harvestedThingDef>
       <harvestYield>6</harvestYield>
-      <sowMinSkill>1</sowMinSkill>
+      <sowMinSkill>3</sowMinSkill>
       <sowTags>
         <li>Hydroponic</li>
       </sowTags>
@@ -174,7 +174,7 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>SLP_ShboombloomNectar</harvestedThingDef>
       <harvestYield>6</harvestYield>
-      <sowMinSkill>1</sowMinSkill>
+      <sowMinSkill>6</sowMinSkill>
       <sowTags>
         <li>Ground</li>
         <li>Hydroponic</li>

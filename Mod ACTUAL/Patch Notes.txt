@@ -2,10 +2,11 @@ Update v1.5.1 Build 14/02/25 | Post
 *Adjustments, excluding bug fixes, will only be made to the Rimworld 1.5 Version of this mod (just a hassle maintaining both sorry)
 
 Additions:
-
+N/A
 
 Changes:
-
+Penicillium minimum required plants level to sow increased from 1 to 3
+Shboombloom minimum required plants level to sow increased from 1 to 6 (keep it closer to psychoid)
 
 Localisation:
 N/A
