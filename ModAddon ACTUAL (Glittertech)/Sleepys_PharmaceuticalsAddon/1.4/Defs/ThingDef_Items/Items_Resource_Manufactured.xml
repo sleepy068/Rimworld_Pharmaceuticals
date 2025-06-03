@@ -21,6 +21,9 @@
       <DeteriorationRate>1.0</DeteriorationRate>
     </statBases>
 	<allowedArchonexusCount>25</allowedArchonexusCount>
+	<thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
 	<tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
