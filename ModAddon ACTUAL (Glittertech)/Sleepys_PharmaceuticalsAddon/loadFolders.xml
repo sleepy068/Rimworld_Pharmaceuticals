@@ -1,10 +1,14 @@
 <loadFolders>
-
-	<v1.4>
+	<v1.5>
 		<li>/</li>
-		<li>1.4</li>
-		<li IfModActive="Ludeon.RimWorld.Biotech">1.4/AddonBiotech</li>	
-		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/AddonIdeology</li>	
-	</v1.4>
-	
+		<li>1.5</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.5/AddonBiotech</li>	
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.5/AddonIdeology</li>	
+	</v1.5>
+	<v1.6>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Biotech">1.6/AddonBiotech</li>	
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/AddonIdeology</li>	
+	</v1.6>
 </loadFolders>

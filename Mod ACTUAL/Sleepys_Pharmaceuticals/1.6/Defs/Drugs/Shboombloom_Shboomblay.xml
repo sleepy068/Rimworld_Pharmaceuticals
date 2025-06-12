@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Shboomblay</defName>
+    <label>shboomblay</label>
+    <description>Extracted alkaloid from the nectar of the Shboombloom flower. Shboomblay is known for its ability for producing a potent rush of pleasurable feelings and reducing the need for rest for a short time. While the nectar of the Shboombloom flower is incredibly useful as a means of producing a large range of drugs it is rather rare and not often farmed or available on mid-worlds. Rather, the flower, or more specifically the drug precursor made from it, Amoxiclite, is shipped in by mega-corporations for a large range of uses.</description>
+    <descriptionHyperlinks>
+      <HediffDef>ShboomblayHigh</HediffDef>
+	  <HediffDef>ShboombloomTolerance</HediffDef>
+      <HediffDef>ShboombloomAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Shboomblay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.60</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>21</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.80</joy>
+      <drugCategory>Hard</drugCategory>
+      <baseIngestTicks>150</baseIngestTicks>
+      <ingestSound>Ingest_Snort</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Snort {0}</ingestCommandString>
+      <ingestReportString>Snorting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ShboomblayHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Shboombloom</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ShboombloomTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>ShboombloomSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <SLP_ShboombloomNectar>8</SLP_ShboombloomNectar>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Shboombloom</chemical>
+        <addictiveness>0.01</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>112</listOrder>
+        <overdoseSeverityOffset>0.10~0.22</overdoseSeverityOffset>
+        <largeOverdoseChance>0.010</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>ShboomblayHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on shboomblay</label>
+    <labelNoun>a shboomblay high</labelNoun>
+    <description>Shboomblay in the bloodstream. Produces a potent rush of pleasurable feelings.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <restFallFactor>0.70</restFallFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.10</offset>
+            </li>
+			<li>
+              <capacity>Moving</capacity>
+              <offset>0.10</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>ShboomblayHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ShboomblayHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on shboomblay</label>
+        <description>I feel ecstatic and ready to take on the world!</description>
+        <baseMoodEffect>30</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!-- Shboombloom addiction -->
+
+  <ChemicalDef>
+    <defName>Shboombloom</defName>
+    <label>shboombloom</label>
+    <addictionHediff>ShboombloomAddiction</addictionHediff>
+	<toleranceHediff>ShboombloomTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Shboombloom</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>shboombloom</label>
+    <description>Because of a shboombloom addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.433</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>ShboombloomAddiction</defName>
+    <label>shboombloom addiction</label>
+    <description>A chemical addiction to shboombloom. Long-term presence of shboombloom has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of shboombloom, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <chemicalNeed>Chemical_Shboombloom</chemicalNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.045</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <painFactor>1</painFactor>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>120</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>60</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>ShboombloomWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ShboombloomAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>Shboombloom withdrawal</label>
+        <description>Everything kind of sucks. I feel like I am losing hope and energy.</description>
+        <baseMoodEffect>-25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>ShboombloomTolerance</defName>
+    <label>shboombloom tolerance</label>
+    <description>A built-up tolerance to shboombloom. The more severe this tolerance is, the more shboombloom it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Shboombloom</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 360)</li>
+            <li>(1, 240)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 240)</li>
+            <li>(1, 110)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 240)</li>
+            <li>(1, 110)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+</Defs>

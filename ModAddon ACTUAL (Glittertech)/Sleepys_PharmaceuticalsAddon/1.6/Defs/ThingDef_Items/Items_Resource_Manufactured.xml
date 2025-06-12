@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>SLP_Nanites</defName>
+    <label>nanites</label>
+    <description>A fine powder that contains millions of programmable nanites, it is used in the manufacturing a handful of useful drugs.</description>
+	<possessionCount>5</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Precursor_Nanites</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <stackLimit>150</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>10</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>0.7</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+	<allowedArchonexusCount>25</allowedArchonexusCount>
+	<thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+  
+</Defs>

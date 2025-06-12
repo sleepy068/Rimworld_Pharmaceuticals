@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Leviathan</defName>
+    <label>leviathan</label>
+    <description>Leviathan, is an ultra tech medication used as a significant military performance enhancer via a digestible nanite neural support network. This network actively supports the user via by boosting various nerves, organ and muscle performance to peak threshold levels. It significantly reduces pain.</description>
+    <descriptionHyperlinks>
+      <HediffDef>LeviathanHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Leviathan</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>800</WorkToMake>-->
+      <MarketValue>95</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>3</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>LeviathanHigh</hediffDef>
+          <severity>0.33</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.4</offset>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetPsyfocus">
+          <offset>0.50</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1014</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>LeviathanHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>leviathan</label>
+    <labelNoun>a leviathan high</labelNoun>
+    <description>Leviathan in the bloodstream. The nanites significantly boost the bodies performance.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.333</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <hungerRateFactorOffset>-0.5</hungerRateFactorOffset>
+		  <painFactor>0.2</painFactor>
+		  <restFallFactor>0.70</restFallFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.20</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.50</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>LeviathanHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>LeviathanHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>leviathan</label>
+        <description>I feel invincible!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

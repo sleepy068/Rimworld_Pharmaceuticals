@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Hero</defName>
+    <label>hero</label>
+    <description>Hero, is an ultra tech medication used to boost the user in most combat and emergency response roles via a digestible nanite neural support network. This network actively supports the user by hijacking their optical nerve network to detect and visually identify potential enemies for the user in the style of an overhead display. Memory bank nanites ensure important information such as enemy positions, their condition, the user's condition and various small details are maintained for the duration of the drug. The network ensures that muscle reaction speed, performance and control is at its peak and forcibly increases the users pain shock threshold, so they can fight for longer.</description>
+    <descriptionHyperlinks>
+      <HediffDef>HeroHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Hero</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>800</WorkToMake>-->
+      <MarketValue>88</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>3</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>HeroHigh</hediffDef>
+          <severity>0.33</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1013</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>HeroHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>hero</label>
+    <labelNoun>a hero high</labelNoun>
+    <description>Hero in the bloodstream. The nanites help the body fight more efficiently and effectively.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.333</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<ShootingAccuracyPawn>8.00</ShootingAccuracyPawn>
+				<MeleeHitChance>8.00</MeleeHitChance>
+				<MeleeDodgeChance>10.00</MeleeDodgeChance>
+				<AimingDelayFactor>-0.10</AimingDelayFactor>
+				<PainShockThreshold>0.15</PainShockThreshold>
+		  </statOffsets>
+          <capMods>
+            <li>
+              <capacity>Sight</capacity>
+              <offset>0.30</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>HeroHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>HeroHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>hero</label>
+        <description>Would you look at me? I'm setting records!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

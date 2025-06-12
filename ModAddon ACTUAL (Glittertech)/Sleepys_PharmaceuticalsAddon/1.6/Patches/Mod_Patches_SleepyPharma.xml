@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Sleepy's Pharmaceuticals</li>
+		</mods>
+		
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ResearchProjectDef[defName="SLP_GlitterMed"]</xpath>
+					<value>
+						<tab>SLP_PHARMA</tab>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="SLP_GlitterMed"]/researchViewX</xpath>
+					<value>
+						<researchViewX>3.00</researchViewX>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ResearchProjectDef[defName="SLP_GlitterMed"]/researchViewY</xpath>
+					<value>
+						<researchViewY>0.00</researchViewY>
+					</value>
+				</li>
+			</operations>
+		</match>
+		
+	</Operation>
+</Patch>

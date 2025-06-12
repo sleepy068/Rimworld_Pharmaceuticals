@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Technica</defName>
+    <label>technica</label>
+    <description>Technica, is an ultra tech medication used to inspire the user via a digestible nanite neural support network that effectively allows them to craft items to a higher level of quality by providing a creativity inspiration. \n\nThe drug won't have any effect if the user is already inspired.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_TechnicaHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Technica</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.90</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>800</WorkToMake>-->
+      <MarketValue>120</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>3</minRewardCount>
+    <ingestible>
+      <foodType>Processed, Fluid</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_TechnicaHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1011</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+      </li>
+	  <li Class="Sleepys_PharmaceuticalsAddon.SLP_CompProperties_GiveInspiration">
+	    <SLP_inspiration>Inspired_Creativity</SLP_inspiration>
+	  </li>
+    </comps>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_TechnicaHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>technica</label>
+    <labelNoun>a technica high</labelNoun>
+    <description>Technica in the bloodstream. The nanites help boost the creatively sectors of the brain, allowing the crafting of higher quality items.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.00</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+	<!--
+      <stages>
+        <li>
+        </li>
+      </stages>
+	 -->
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_TechnicaHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_TechnicaHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>technica</label>
+        <description>I'm inspired to make great items and pieces of art!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

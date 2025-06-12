@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Rimtasy</defName>
+    <label>rimtasy</label>
+    <description>A synthetic empathogen drug of the amphetamine class. Rimtasy produces a strong euphoric feeling and increases feelings of empathy and compassion towards others. While typically know as a party drug, Rimtasy causes a sharp rise in body temperature and blood pressure which can result in the user suffering heatstroke. On mid-worlds, Rimtasy is commonly illegally used as a mood enhancer at parties and nightclubs.</description>
+    <descriptionHyperlinks>
+      <HediffDef>RimtasyHigh</HediffDef>
+	  <HediffDef>AmphetamineTolerance</HediffDef>
+      <HediffDef>AmphetamineAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Rimtasy</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1600</WorkToMake>
+      <MarketValue>42</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.70</joy>
+      <drugCategory>Hard</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>RimtasyHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Amphetamine</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AmphetamineTolerance</hediffDef>
+          <severity>0.03</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.20</offset>
+          <toleranceChemical>Amphetamine</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>AmphetamineSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Amphetamine</chemical>
+        <addictiveness>0.022</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>115</listOrder>
+        <overdoseSeverityOffset>0.12~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.010</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>RimtasyHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on rimtasy</label>
+    <labelNoun>a rimtasy high</labelNoun>
+    <description>Rimtasy in the bloodstream. Produces a strong euphoric feeling.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+				<ComfyTemperatureMax>-7</ComfyTemperatureMax>
+				<NegotiationAbility>0.10</NegotiationAbility>
+				<SocialImpact>0.10</SocialImpact>
+		  </statOffsets>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.10</offset>
+            </li>
+			<li>
+              <capacity>Sight</capacity>
+              <offset>0.20</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>RimtasyHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>RimtasyHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on rimtasy</label>
+        <description>I feel energised and just so peaceful! I feel like I really get people.</description>
+        <baseMoodEffect>22</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

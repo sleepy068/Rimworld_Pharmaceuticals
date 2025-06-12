@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Sleepezee</defName>
+    <label>sleepezee</label>
+    <description>Sleepezee, a central nervous system depressants, is a medication used to help the user fall asleep quicker and sleep better.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SleepezeeHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Sleepezee</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>600</WorkToMake>
+      <MarketValue>8</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SleepezeeHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>-0.30</offset>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	<recipeMaker>
+      <researchPrerequisite>SLP_SupportDrugs</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>530</listOrder>
+        <overdoseSeverityOffset>0.04~0.07</overdoseSeverityOffset>
+        <largeOverdoseChance>0.0</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SleepezeeHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>sleepy on sleepezee</label>
+    <labelNoun>a sleepezee high</labelNoun>
+    <description>Sleepezee in the bloodstream. It is effective at slowing down the central nervous system and helping the user fall asleep.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-2.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+			<RestRateMultiplier>0.25</RestRateMultiplier>
+		  </statOffsets>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SleepezeeHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SleepezeeHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>sleepy on sleepezee</label>
+        <description>I'm starting to feel very tired... I think it is time to go to bed.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

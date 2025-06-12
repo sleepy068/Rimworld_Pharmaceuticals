@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_CleansingWipes</defName>
+    <label>cleansing wipes</label>
+    <description>Softer than silk and merciless on grime of the rim, these Skin Cleansing Facial wipes are a gentle cleanser that lifts away grease, impurities and even make-up effectively. Making the user feel refreshed, clean and happier.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_CleanWipeHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Cosmetic_CleansingWipes</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>650</WorkToMake>
+      <MarketValue>3</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+	  <ingestCommandString>Use {0}</ingestCommandString>
+      <ingestReportString>Using {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_CleanWipeHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>900</listOrder>
+        <overdoseSeverityOffset>0</overdoseSeverityOffset>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_CleanWipeHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>clean face</label>
+    <labelNoun>clean face</labelNoun>
+    <description>Face fresh and clean.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.6</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+	<stages>
+        <li>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_CleanWipeHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_CleanWipeHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>feeling fresh</label>
+        <description>The grime and muck is cleaned off my face! I feel refreshed!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <RecipeDef>
+    <defName>Make_FaceWipes</defName>
+    <label>make face wipes x4</label>
+    <description>Make face wipes from salicylic acid and cloth.</description>
+    <jobString>Making face wipes.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>CosmeticAid</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+    </recipeUsers>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>650</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SLP_SalicylicAcid</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SLP_SalicylicAcid</li>
+		<li>Cloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SLP_CleansingWipes>4</SLP_CleansingWipes>
+    </products>
+  </RecipeDef>
+  
+</Defs>

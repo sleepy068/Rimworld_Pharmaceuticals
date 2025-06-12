@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Pep</defName>
+    <label>pep</label>
+    <description>A moderately powerful stimulant that helps the user stay awake for longer.</description>
+    <descriptionHyperlinks>
+      <HediffDef>PepHigh</HediffDef>
+	  <HediffDef>PepTolerance</HediffDef>
+      <HediffDef>PepAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Pep</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>750</WorkToMake>
+      <MarketValue>4</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PepHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Pep</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>PepTolerance</hediffDef>
+          <severity>0.10</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+		<li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.2</offset>
+          <toleranceChemical>Pep</toleranceChemical>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Pep</chemical>
+        <addictiveness>0.005</addictiveness>
+		<minToleranceToAddict>0.05</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>520</listOrder>
+        <overdoseSeverityOffset>0.04~0.09</overdoseSeverityOffset>
+        <largeOverdoseChance>0.0</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>PepHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>alert on pep</label>
+    <labelNoun>a pep high</labelNoun>
+    <description>Pep in the bloodstream. It is very effective at reducing fatigue.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-4.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>PepHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PepHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>alert on pep</label>
+        <description>I feel alert. Feels like I can stay awake forever.</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <!-- Pep addiction -->
+
+  <ChemicalDef>
+    <defName>Pep</defName>
+    <label>pep</label>
+    <addictionHediff>PepAddiction</addictionHediff>
+	<toleranceHediff>PepTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Pep</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>pep</label>
+    <description>Because of a pep addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.500</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>PepAddiction</defName>
+    <label>pep addiction</label>
+    <description>A chemical addiction to pep. Short-term presence of pep has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of pep, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <chemicalNeed>Chemical_Pep</chemicalNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.125</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.10</restFallFactorOffset>
+        <capMods>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>PepWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PepAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>pep withdrawal</label>
+        <description>Uhhh... I feel sleepy and moody, I don't like this...</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>PepTolerance</defName>
+    <label>pep tolerance</label>
+    <description>A built-up tolerance to pep. The more severe this tolerance is, the more pep it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.020</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Pep</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+   <RecipeDef>
+    <defName>Make_Pep</defName>
+    <label>make pep x2</label>
+    <description>Make pep from neutroamine.</description>
+    <jobString>Making pep.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+	<researchPrerequisite>SLP_SupportDrugs</researchPrerequisite>
+    <recipeUsers>
+        <li>DrugLab</li>
+    </recipeUsers>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>750</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Neutroamine</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Neutroamine</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SLP_Pep>2</SLP_Pep>
+    </products>
+  </RecipeDef>
+  
+  
+</Defs>

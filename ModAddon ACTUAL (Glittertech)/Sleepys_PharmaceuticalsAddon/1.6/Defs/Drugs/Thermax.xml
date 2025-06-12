@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Thermax</defName>
+    <label>thermax</label>
+    <description>Thermax, a drug typically found on high tech worlds that are within the sub-optimal goldlock's zones of their stars, usually resulting in a planet too hot or too cold to support all but the hardy or lucky. The drug complements the body's ability to control body heat by creating a thin thermal layer when too cold or by creating microscopic heat sinks when too hot making it much easier for the user to survive in extreme conditions.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_ThermaxHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Thermax</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.90</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MarketValue>16</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <minRewardCount>6</minRewardCount>
+	
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_ThermaxHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+	<recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>1</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1100</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+		<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+      </li>
+    </comps>
+	
+	<!--
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+	-->
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_ThermaxHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>Thermax shield</label>
+    <labelNoun>Thermax shield</labelNoun>
+    <description>Thermax in the bloodstream. The blend of nanites and chemicals help the body regulate temperature control.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.333</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+		  <statOffsets>
+			<ComfyTemperatureMin>-24</ComfyTemperatureMin>
+			<ComfyTemperatureMax>24</ComfyTemperatureMax>
+		  </statOffsets>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_ThermaxHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_ThermaxHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>thermax shield</label>
+        <description>I feel snug and comfy, cold snaps and heat waves bring it on!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

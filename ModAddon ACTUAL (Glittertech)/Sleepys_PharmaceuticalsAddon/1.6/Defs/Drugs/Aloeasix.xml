@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>SLP_Aloeasix</defName>
+    <label>aloeasix</label>
+    <description>Aloeasix, a very effective pain reliever that uses nanites to hijack pain signals from the brain but also actively assist the body in recovery by reducing swelling and physical effects of damage, thus further reducing pain. Despite how effective the drug is, there is still a risk of addiction due to the dependency effects pain relievers can have on the user.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_AloeasixHigh</HediffDef>
+	  <HediffDef>SLP_AloeasixTolerance</HediffDef>
+      <HediffDef>SLP_AloeasixAddiction</HediffDef>
+	  <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Aloeasix</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.83</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MarketValue>19</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+	
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <foodType>Processed, Fluid</foodType>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Inject {0}</ingestCommandString>
+      <ingestReportString>Injecting {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_AloeasixHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Aloeasix</toleranceChemical>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_AloeasixTolerance</hediffDef>
+          <severity>0.03</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+	
+    <recipeMaker>
+      <researchPrerequisite>SLP_GlitterMed</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+	
+    <costList>
+      <Neutroamine>2</Neutroamine>
+	  <SLP_Nanites>1</SLP_Nanites>
+    </costList>
+	
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Aloeasix</chemical>
+        <addictiveness>0.01</addictiveness>
+		<minToleranceToAddict>0.035</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>511</listOrder>
+        <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_AloeasixHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>high on aloeasix</label>
+    <labelNoun>a aloeasix high</labelNoun>
+    <description>Aloeasix in the bloodstream. It is very effective at reducing pain.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+	  <li>
+	    <painFactor>0.4</painFactor>
+	  </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_AloeasixHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_AloeasixHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on aloeasix</label>
+        <description>I can barely feel the pain anymore!</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  
+  <!-- Aloeasix addiction -->
+
+  <ChemicalDef>
+    <defName>Aloeasix</defName>
+    <label>aloeasix</label>
+    <addictionHediff>SLP_AloeasixAddiction</addictionHediff>
+	<toleranceHediff>SLP_AloeasixTolerance</toleranceHediff>
+	<generateAddictionGenes>False</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Aloeasix</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>aloeasix</label>
+    <description>Because of a aloeasix addiction, this person needs to periodically consume the drug to avoid withdrawal symptoms.</description>
+    <fallPerDay>0.333</fallPerDay>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>SLP_AloeasixAddiction</defName>
+    <label>aloeasix addiction</label>
+    <description>A chemical addiction to aloeasix. Long-term presence of aloeasix has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of aloeasix, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <chemicalNeed>Chemical_Aloeasix</chemicalNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.066</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <restFallFactorOffset>0.2</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>20</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>AloeasixWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_AloeasixAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>aloeasix withdrawal</label>
+        <description>I feel uneasy, shaky and just too tried to deal with today.</description>
+        <baseMoodEffect>-16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>SLP_AloeasixTolerance</defName>
+    <label>Aoeasix tolerance</label>
+    <description>A built-up tolerance to Aloeasix. The more severe this tolerance is, the more Aloeasix it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Aloeasix</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+      </li>
+	  <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageModerate</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 1200)</li>
+            <li>(1, 600)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+
+  
+</Defs>

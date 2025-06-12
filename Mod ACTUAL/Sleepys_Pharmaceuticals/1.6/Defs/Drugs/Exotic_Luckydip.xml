@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="DrugBase">
+    <defName>SLP_Luckydip</defName>
+    <label>luckydip</label>
+    <description>Luckydip, is an ultra tech drug that can randomly replicate the effects of up to three other drugs at the same time at the maximum possible effectiveness. Fascinatingly, it can do this without the user having to worry about overdoses or addiction of the replicated effects. The nanites involved in creating the random effects can only replicate drugs they have been programmed to copy, so some drugs, niche, rare or would directly harm the user with a full dose, maybe missing from their databases.</description>
+    <descriptionHyperlinks>
+      <HediffDef>SLP_LuckydipHigh</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/SLP_Drug_Luckydip</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <drawSize>0.85</drawSize>
+    </graphicData>
+	<socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <!--<WorkToMake>800</WorkToMake>-->
+      <MarketValue>60</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Ultra</techLevel>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <drugCategory>Social</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <outcomeDoers>
+        <li Class="Sleepys_Pharmaceuticals.SLP_IngestionOutcomeDoer_GiveRandomHediff">
+          <severity>1.0</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>SLP_LuckydipHigh</hediffDef>
+          <severity>1.00</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1013</listOrder>
+        <overdoseSeverityOffset>0.00</overdoseSeverityOffset>
+        <largeOverdoseChance>0.00</largeOverdoseChance>
+      </li>
+    </comps>
+	<tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>SLP_LuckydipHigh</defName>
+    <hediffClass>Hediff_High</hediffClass>
+    <label>luckydip</label>
+    <labelNoun>a luckydip high</labelNoun>
+    <description>Luckydip in the bloodstream. It can replicate the effects of random drugs.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-24.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <capMods>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>SLP_LuckydipHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SLP_LuckydipHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>luckydip</label>
+        <description>I wonder what effects I'll experience?</description>
+        <baseMoodEffect>0</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
